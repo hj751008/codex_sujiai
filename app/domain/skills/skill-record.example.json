@@ -1,0 +1,18 @@
+{
+  "id": "U1-S3",
+  "unitId": "unit1-prime-factorization",
+  "title": "Express a number in prime factorized form",
+  "status": "provisional",
+  "tags": [
+    "prime-factorization",
+    "unit1"
+  ],
+  "description": "Learner can rewrite a natural number into prime factorized form.",
+  "sourceDocs": [
+    "docs/mastery-rules.md"
+  ],
+  "notes": [
+    "Canonical skill IDs should stay stable across app and docs.",
+    "Do not infer mastery thresholds from this record."
+  ]
+}

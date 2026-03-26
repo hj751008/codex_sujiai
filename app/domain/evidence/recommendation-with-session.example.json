@@ -1,0 +1,52 @@
+{
+  "learnerId": "sample-learner",
+  "targetSkillId": "U1-S4",
+  "targetSkillTitle": "Check whether a proposed prime-factor result is complete and valid",
+  "recommendationType": "practice",
+  "confidence": "limited",
+  "needsReview": true,
+  "reasonCodes": [
+    "documented_error_pattern_match",
+    "mastery_thresholds_not_approved",
+    "required_prerequisite_blocker"
+  ],
+  "summary": "Learner can attempt factorization but misses whether all prime factors are present.",
+  "recommendedActivities": [
+    {
+      "activityId": "ACT-U1-S4-VERIFY-PRIME-FIRST",
+      "skillId": "U1-S4",
+      "activityType": "worked-bridge",
+      "title": "Verification Bridge With 12",
+      "goal": "Teach the learner to check whether every factor is prime before accepting a factorization.",
+      "firstTutorQuestion": "Before checking the product, are all the factors prime?"
+    }
+  ],
+  "sessionPayload": {
+    "learnerId": "sample-learner",
+    "targetSkillId": "U1-S4",
+    "steps": [
+      {
+        "activityId": "ACT-U1-S3-REWRITE-CLEANLY",
+        "lessonStepId": "STEP-U1-S3-REWRITE-CLEANLY",
+        "skillId": "U1-S3",
+        "activityType": "dialogue-flow",
+        "title": "Rewrite the Final Factorization Cleanly",
+        "openingLine": "Your split-work is close; now let's turn it into one clean final factorization.",
+        "firstTutorQuestion": "Which factors should still remain in the final line?",
+        "smallHint": "Keep only prime factors in the last line, and make sure none were dropped.",
+        "goodStoppingPoint": "Learner writes one complete prime factorization with no missing or composite factor."
+      },
+      {
+        "activityId": "ACT-U1-S4-VERIFY-PRIME-FIRST",
+        "lessonStepId": "STEP-U1-S4-VERIFY-PRIME-FIRST",
+        "skillId": "U1-S4",
+        "activityType": "worked-bridge",
+        "title": "Verification Bridge With 12",
+        "openingLine": "Let's check whether the answer is really prime factorization, not just a matching product.",
+        "firstTutorQuestion": "Before checking the product, are all the factors prime?",
+        "smallHint": "If one factor is composite, the answer is not finished yet.",
+        "goodStoppingPoint": "Learner rejects 2 x 6 because 6 is not prime and accepts 2 x 2 x 3."
+      }
+    ]
+  }
+}

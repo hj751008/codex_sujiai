@@ -1,0 +1,152 @@
+[
+  {
+    "name": "prime-number-definition-confusion",
+    "event": {
+      "eventId": "case-u1-s1-001",
+      "learnerId": "case-learner",
+      "kind": "tutor_observation",
+      "skillId": "U1-S1",
+      "result": "incorrect",
+      "errorPatternIds": [
+        "u1-s1-one-is-prime"
+      ],
+      "observations": [
+        "Learner says 1 is a prime number."
+      ],
+      "confidenceSignal": "hesitant"
+    },
+    "expected": {
+      "masterySkillId": "U1-S1",
+      "masteryStatus": "developing",
+      "recommendationSkillIds": [
+        "U1-S1"
+      ],
+      "activityIds": [
+        "ACT-U1-S1-CONCEPT-CHECK"
+      ],
+      "lessonStepIds": [
+        "STEP-U1-S1-CONCEPT-CHECK"
+      ]
+    }
+  },
+  {
+    "name": "missing-repeated-prime-factor",
+    "event": {
+      "eventId": "case-u1-s3-001",
+      "learnerId": "case-learner",
+      "kind": "worked_example_observation",
+      "skillId": "U1-S3",
+      "result": "partial",
+      "errorPatternIds": [
+        "u1-s3-missing-repeated-prime-factor"
+      ],
+      "observations": [
+        "Learner omits one repeated prime factor in the final expression."
+      ],
+      "confidenceSignal": "hesitant"
+    },
+    "expected": {
+      "masterySkillId": "U1-S3",
+      "masteryStatus": "developing",
+      "recommendationSkillIds": [
+        "U1-S3"
+      ],
+      "activityIds": [
+        "ACT-U1-S3-REWRITE-CLEANLY"
+      ],
+      "lessonStepIds": [
+        "STEP-U1-S3-REWRITE-CLEANLY"
+      ]
+    }
+  },
+  {
+    "name": "product-only-verification",
+    "event": {
+      "eventId": "case-u1-s4-001",
+      "learnerId": "case-learner",
+      "kind": "worked_example_observation",
+      "skillId": "U1-S4",
+      "result": "incorrect",
+      "errorPatternIds": [
+        "u1-s4-non-prime-factor-accepted"
+      ],
+      "observations": [
+        "Learner accepts an answer because the product matches."
+      ],
+      "confidenceSignal": "hesitant"
+    },
+    "expected": {
+      "masterySkillId": "U1-S4",
+      "masteryStatus": "developing",
+      "recommendationSkillIds": [
+        "U1-S4"
+      ],
+      "activityIds": [
+        "ACT-U1-S4-VERIFY-PRIME-FIRST"
+      ],
+      "lessonStepIds": [
+        "STEP-U1-S4-VERIFY-PRIME-FIRST"
+      ]
+    }
+  },
+  {
+    "name": "transfer-divisor-count-restart",
+    "event": {
+      "eventId": "case-u1-s5a-001",
+      "learnerId": "case-learner",
+      "kind": "application_observation",
+      "skillId": "U1-S5A",
+      "result": "incorrect",
+      "errorPatternIds": [
+        "u1-s5a-divisor-count-restart"
+      ],
+      "observations": [
+        "Learner lists divisors one by one and does not reuse prime factorization."
+      ],
+      "confidenceSignal": "hesitant"
+    },
+    "expected": {
+      "masterySkillId": "U1-S5A",
+      "masteryStatus": "developing",
+      "recommendationSkillIds": [
+        "U1-S5A"
+      ],
+      "activityIds": [
+        "ACT-U1-S5A-DIVISOR-COUNT-TRANSFER"
+      ],
+      "lessonStepIds": [
+        "STEP-U1-S5A-DIVISOR-COUNT-TRANSFER"
+      ]
+    }
+  },
+  {
+    "name": "gcd-lcm-mixup",
+    "event": {
+      "eventId": "case-u1-s5c-001",
+      "learnerId": "case-learner",
+      "kind": "application_observation",
+      "skillId": "U1-S5C",
+      "result": "incorrect",
+      "errorPatternIds": [
+        "u1-s5c-gcd-lcm-mixup"
+      ],
+      "observations": [
+        "Learner mixes common-divisor and common-multiple reasoning."
+      ],
+      "confidenceSignal": "hesitant"
+    },
+    "expected": {
+      "masterySkillId": "U1-S5C",
+      "masteryStatus": "developing",
+      "recommendationSkillIds": [
+        "U1-S5C"
+      ],
+      "activityIds": [
+        "ACT-U1-S5C-GCD-LCM-SORT"
+      ],
+      "lessonStepIds": [
+        "STEP-U1-S5C-GCD-LCM-SORT"
+      ]
+    }
+  }
+]

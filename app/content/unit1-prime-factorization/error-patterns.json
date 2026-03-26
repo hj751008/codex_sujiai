@@ -1,0 +1,65 @@
+[
+  {
+    "id": "u1-s1-one-is-prime",
+    "skillId": "U1-S1",
+    "status": "draft-from-docs",
+    "summary": "Learner treats 1 as a prime number.",
+    "sourceDocs": [
+      "docs/suji-error-patterns-prime-factorization.md"
+    ]
+  },
+  {
+    "id": "u1-s3-missing-repeated-prime-factor",
+    "skillId": "U1-S3",
+    "status": "draft-from-docs",
+    "summary": "Learner omits repeated prime factors when writing prime factorized form.",
+    "sourceDocs": [
+      "docs/suji-error-patterns-prime-factorization.md"
+    ]
+  },
+  {
+    "id": "u1-s4-non-prime-factor-accepted",
+    "skillId": "U1-S4",
+    "status": "draft-from-docs",
+    "summary": "Learner accepts a factorization because the product matches, without checking whether all factors are prime.",
+    "sourceDocs": [
+      "docs/suji-error-patterns-prime-factorization.md"
+    ]
+  },
+  {
+    "id": "u1-s5a-divisor-count-restart",
+    "skillId": "U1-S5A",
+    "status": "draft-from-docs",
+    "summary": "Learner lists divisors one by one instead of reusing the prime factorization structure.",
+    "sourceDocs": [
+      "docs/suji-error-patterns-prime-factorization.md"
+    ]
+  },
+  {
+    "id": "u1-s5b-random-square-factor",
+    "skillId": "U1-S5B",
+    "status": "draft-from-docs",
+    "summary": "Learner chooses a random multiplier for a square-number task instead of using the missing prime-factor counts.",
+    "sourceDocs": [
+      "docs/suji-error-patterns-prime-factorization.md"
+    ]
+  },
+  {
+    "id": "u1-s5c-gcd-lcm-mixup",
+    "skillId": "U1-S5C",
+    "status": "draft-from-docs",
+    "summary": "Learner mixes common-divisor and common-multiple reasoning when comparing two factorizations.",
+    "sourceDocs": [
+      "docs/suji-error-patterns-prime-factorization.md"
+    ]
+  },
+  {
+    "id": "u1-s5d-relevant-part-unclear",
+    "skillId": "U1-S5D",
+    "status": "draft-from-docs",
+    "summary": "Learner cannot explain which part of the factorization matters for the new question.",
+    "sourceDocs": [
+      "docs/suji-error-patterns-prime-factorization.md"
+    ]
+  }
+]

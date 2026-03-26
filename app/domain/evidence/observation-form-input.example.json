@@ -1,0 +1,12 @@
+{
+  "learnerResponse": "I rewrote the final answer using only prime factors and kept every factor.",
+  "fieldValues": {
+    "uses_only_prime_factors": true,
+    "keeps_all_factors": true
+  },
+  "tutorNote": "Learner rewrote the factorization cleanly without dropping any factors.",
+  "timestamp": "2026-03-26T10:00:00+09:00",
+  "notes": [
+    "This is the app-friendly observation form shape for evaluator input."
+  ]
+}

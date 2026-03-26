@@ -1,0 +1,11 @@
+{
+  "learnerResponse": "I should rewrite using only prime factors and keep every factor in the final line.",
+  "observedSignals": [
+    "writes_only_prime_factors",
+    "keeps_all_factors"
+  ],
+  "notes": [
+    "This evaluator is intentionally conservative.",
+    "Auto-complete happens only when all configured required signals are present."
+  ]
+}

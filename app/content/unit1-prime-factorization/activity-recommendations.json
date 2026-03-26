@@ -1,0 +1,114 @@
+[
+  {
+    "activityId": "ACT-U1-S1-CONCEPT-CHECK",
+    "skillId": "U1-S1",
+    "status": "draft-from-docs",
+    "activityType": "dialogue-flow",
+    "title": "Prime, Composite, or Neither",
+    "goal": "Repair the idea that 1 is prime and rebuild divisor-based classification.",
+    "firstTutorQuestion": "How many divisors does 1 actually have?",
+    "successSignal": "Learner says 1 is neither prime nor composite and gives a divisor-based reason.",
+    "sourceDocs": [
+      "docs/suji-tutor-dialogue-flow-prime-factorization.md",
+      "docs/suji-error-patterns-prime-factorization.md"
+    ]
+  },
+  {
+    "activityId": "ACT-U1-S2-ENTRY-BRIDGE",
+    "skillId": "U1-S2",
+    "status": "draft-from-docs",
+    "activityType": "worked-bridge",
+    "title": "Entry Bridge With 24",
+    "goal": "Rebuild the habit of starting with an easy divisor pair instead of freezing.",
+    "firstTutorQuestion": "What is the easiest divisor you can test first?",
+    "successSignal": "Learner chooses 2 as a starting point for 24 and explains why.",
+    "sourceDocs": [
+      "docs/suji-worked-bridge-prime-factorization-entry.md",
+      "docs/suji-tutor-dialogue-flow-prime-factorization.md"
+    ]
+  },
+  {
+    "activityId": "ACT-U1-S3-REWRITE-CLEANLY",
+    "skillId": "U1-S3",
+    "status": "draft-from-docs",
+    "activityType": "dialogue-flow",
+    "title": "Rewrite the Final Factorization Cleanly",
+    "goal": "Stabilize the move from split-work to a complete final prime factorization.",
+    "firstTutorQuestion": "Which factors should still remain in the final line?",
+    "successSignal": "Learner writes one complete prime factorization with no missing or composite factor.",
+    "sourceDocs": [
+      "docs/suji-tutor-dialogue-flow-prime-factorization.md",
+      "docs/suji-subskills-prime-factorization.md"
+    ]
+  },
+  {
+    "activityId": "ACT-U1-S4-VERIFY-PRIME-FIRST",
+    "skillId": "U1-S4",
+    "status": "draft-from-docs",
+    "activityType": "worked-bridge",
+    "title": "Verification Bridge With 12",
+    "goal": "Teach the learner to check whether every factor is prime before accepting a factorization.",
+    "firstTutorQuestion": "Before checking the product, are all the factors prime?",
+    "successSignal": "Learner rejects 2 x 6 because 6 is not prime and chooses 2 x 2 x 3.",
+    "sourceDocs": [
+      "docs/suji-worked-bridge-prime-factorization-verification.md",
+      "docs/suji-tutor-dialogue-flow-prime-factorization.md"
+    ]
+  },
+  {
+    "activityId": "ACT-U1-S5A-DIVISOR-COUNT-TRANSFER",
+    "skillId": "U1-S5A",
+    "status": "draft-from-docs",
+    "activityType": "dialogue-flow",
+    "title": "Reuse Factorization for Divisor Count",
+    "goal": "Stop the learner from restarting divisor counting from scratch.",
+    "firstTutorQuestion": "In this problem, do you need the factorization itself or the number of divisors?",
+    "successSignal": "Learner starts from the existing prime factorization instead of listing divisors one by one.",
+    "sourceDocs": [
+      "docs/suji-tutor-dialogue-flow-prime-factorization.md",
+      "docs/suji-subskills-prime-factorization.md"
+    ]
+  },
+  {
+    "activityId": "ACT-U1-S5B-SQUARE-NUMBER",
+    "skillId": "U1-S5B",
+    "status": "draft-from-docs",
+    "activityType": "dialogue-flow",
+    "title": "Find the Missing Factor for a Square",
+    "goal": "Connect prime-factor counts to square-number structure.",
+    "firstTutorQuestion": "Which prime factor count is odd right now and needs one more?",
+    "successSignal": "Learner identifies the missing factor from the prime factorization and explains why.",
+    "sourceDocs": [
+      "docs/suji-tutor-dialogue-flow-prime-factorization.md",
+      "docs/suji-error-patterns-prime-factorization.md"
+    ]
+  },
+  {
+    "activityId": "ACT-U1-S5C-GCD-LCM-SORT",
+    "skillId": "U1-S5C",
+    "status": "draft-from-docs",
+    "activityType": "dialogue-flow",
+    "title": "Sort Common Divisor vs Common Multiple",
+    "goal": "Help the learner name which structure to look for before calculating.",
+    "firstTutorQuestion": "Are you looking for what overlaps or what covers both numbers?",
+    "successSignal": "Learner can say whether the task is about shared structure or covering structure before solving.",
+    "sourceDocs": [
+      "docs/suji-tutor-dialogue-flow-prime-factorization.md",
+      "docs/suji-error-patterns-prime-factorization.md"
+    ]
+  },
+  {
+    "activityId": "ACT-U1-S5D-RELEVANT-PART-EXPLAIN",
+    "skillId": "U1-S5D",
+    "status": "draft-from-docs",
+    "activityType": "dialogue-flow",
+    "title": "Explain Which Part of the Factorization Matters",
+    "goal": "Make the learner point to the relevant part of the factorization before solving a transfer task.",
+    "firstTutorQuestion": "Which part of the factorization helps you answer this question first?",
+    "successSignal": "Learner identifies the relevant part of the factorization before using it.",
+    "sourceDocs": [
+      "docs/suji-tutor-dialogue-flow-prime-factorization.md",
+      "docs/suji-error-patterns-prime-factorization.md"
+    ]
+  }
+]

@@ -1,0 +1,23 @@
+{
+  "eventId": "example-u1-s4-check-001",
+  "learnerId": "sample-learner",
+  "skillId": "U1-S4",
+  "kind": "worked_example_observation",
+  "result": "partial",
+  "observations": [
+    "Learner checks product equality first.",
+    "Learner does not verify whether each factor is prime."
+  ],
+  "errorPatternIds": [
+    "u1-s4-non-prime-factor-accepted"
+  ],
+  "confidenceSignal": "hesitant",
+  "sourceDocs": [
+    "docs/suji-error-patterns-prime-factorization.md",
+    "docs/suji-subskills-prime-factorization.md"
+  ],
+  "notes": [
+    "Evidence can be rich even when mastery thresholds are undecided.",
+    "Do not collapse this event directly into pass/fail without approved rules."
+  ]
+}

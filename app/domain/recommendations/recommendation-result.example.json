@@ -1,0 +1,19 @@
+{
+  "learnerId": "sample-learner",
+  "targetSkillId": "U1-S4",
+  "recommendationType": "practice",
+  "confidence": "limited",
+  "reasonCodes": [
+    "documented_example_match",
+    "mastery_thresholds_not_approved"
+  ],
+  "summary": "Recommend additional factorization-checking practice before broader application tasks.",
+  "sourceDocs": [
+    "docs/recommendation-rules.md"
+  ],
+  "needsReview": true,
+  "notes": [
+    "Use conservative wording when evidence or ranking logic is incomplete.",
+    "Do not encode hidden weights or tie-break formulas."
+  ]
+}

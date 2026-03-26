@@ -1,0 +1,18 @@
+{
+  "learnerId": "sample-learner",
+  "skillId": "U1-S4",
+  "status": "needs_more_evidence",
+  "statusApproval": "provisional",
+  "decisionType": "manual_or_rule_assisted",
+  "explanations": [
+    "Learner can inspect a proposed factorization, but current evidence does not show a stable check for prime-only factors.",
+    "No approved numeric threshold exists for auto-promotion to mastered."
+  ],
+  "supportingEvidenceIds": [
+    "example-u1-s4-check-001"
+  ],
+  "blockedBy": [
+    "mastery labels are not finalized in docs/mastery-rules.md",
+    "minimum evidence required for pass remains UNDECIDED"
+  ]
+}

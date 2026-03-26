@@ -1,0 +1,89 @@
+{
+  "learnerId": "sample-learner",
+  "targetSkillId": "U1-S4",
+  "status": "in_progress",
+  "currentStepIndex": 1,
+  "currentStep": {
+    "activityId": "ACT-U1-S4-VERIFY-PRIME-FIRST",
+    "lessonStepId": "STEP-U1-S4-VERIFY-PRIME-FIRST",
+    "skillId": "U1-S4",
+    "activityType": "worked-bridge",
+    "title": "Verification Bridge With 12",
+    "openingLine": "Let's check whether the answer is really prime factorization, not just a matching product.",
+    "firstTutorQuestion": "Before checking the product, are all the factors prime?",
+    "smallHint": "If one factor is composite, the answer is not finished yet.",
+    "goodStoppingPoint": "Learner rejects 2 x 6 because 6 is not prime and accepts 2 x 2 x 3."
+  },
+  "nextStep": null,
+  "completedStepIds": [
+    "STEP-U1-S3-REWRITE-CLEANLY"
+  ],
+  "remainingStepIds": [
+    "STEP-U1-S4-VERIFY-PRIME-FIRST"
+  ],
+  "steps": [
+    {
+      "activityId": "ACT-U1-S3-REWRITE-CLEANLY",
+      "lessonStepId": "STEP-U1-S3-REWRITE-CLEANLY",
+      "skillId": "U1-S3",
+      "activityType": "dialogue-flow",
+      "title": "Rewrite the Final Factorization Cleanly",
+      "openingLine": "Your split-work is close; now let's turn it into one clean final factorization.",
+      "firstTutorQuestion": "Which factors should still remain in the final line?",
+      "smallHint": "Keep only prime factors in the last line, and make sure none were dropped.",
+      "goodStoppingPoint": "Learner writes one complete prime factorization with no missing or composite factor."
+    },
+    {
+      "activityId": "ACT-U1-S4-VERIFY-PRIME-FIRST",
+      "lessonStepId": "STEP-U1-S4-VERIFY-PRIME-FIRST",
+      "skillId": "U1-S4",
+      "activityType": "worked-bridge",
+      "title": "Verification Bridge With 12",
+      "openingLine": "Let's check whether the answer is really prime factorization, not just a matching product.",
+      "firstTutorQuestion": "Before checking the product, are all the factors prime?",
+      "smallHint": "If one factor is composite, the answer is not finished yet.",
+      "goodStoppingPoint": "Learner rejects 2 x 6 because 6 is not prime and accepts 2 x 2 x 3."
+    }
+  ],
+  "completionRule": "complete_all_steps_in_order",
+  "lastEvaluation": {
+    "lessonStepId": "STEP-U1-S3-REWRITE-CLEANLY",
+    "decision": "completed",
+    "matchedRequiredSignals": [
+      "writes_only_prime_factors",
+      "keeps_all_factors"
+    ],
+    "missingRequiredSignals": [],
+    "matchedTextHints": [
+      "prime factors"
+    ],
+    "canAutoAdvance": true
+  },
+  "history": [
+    {
+      "attemptIndex": 0,
+      "lessonStepId": "STEP-U1-S3-REWRITE-CLEANLY",
+      "activityId": "ACT-U1-S3-REWRITE-CLEANLY",
+      "learnerResponse": "I rewrote the final answer using only prime factors and kept every factor.",
+      "fieldValues": {
+        "uses_only_prime_factors": true,
+        "keeps_all_factors": true
+      },
+      "tutorNote": "Learner rewrote the factorization cleanly without dropping any factors.",
+      "timestamp": "2026-03-26T10:00:00+09:00",
+      "evaluation": {
+        "lessonStepId": "STEP-U1-S3-REWRITE-CLEANLY",
+        "decision": "completed",
+        "matchedRequiredSignals": [
+          "writes_only_prime_factors",
+          "keeps_all_factors"
+        ],
+        "missingRequiredSignals": [],
+        "matchedTextHints": [
+          "prime factors"
+        ],
+        "canAutoAdvance": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,248 @@
+{
+  "learnerId": "sample-learner",
+  "sessions": [
+    {
+      "learnerId": "sample-learner",
+      "targetSkillId": "U1-S4",
+      "status": "in_progress",
+      "currentStepIndex": 1,
+      "currentStep": {
+        "activityId": "ACT-U1-S4-VERIFY-PRIME-FIRST",
+        "lessonStepId": "STEP-U1-S4-VERIFY-PRIME-FIRST",
+        "skillId": "U1-S4",
+        "activityType": "worked-bridge",
+        "title": "Verification Bridge With 12",
+        "openingLine": "Let's check whether the answer is really prime factorization, not just a matching product.",
+        "firstTutorQuestion": "Before checking the product, are all the factors prime?",
+        "smallHint": "If one factor is composite, the answer is not finished yet.",
+        "goodStoppingPoint": "Learner rejects 2 x 6 because 6 is not prime and accepts 2 x 2 x 3."
+      },
+      "nextStep": null,
+      "completedStepIds": [
+        "STEP-U1-S3-REWRITE-CLEANLY"
+      ],
+      "remainingStepIds": [
+        "STEP-U1-S4-VERIFY-PRIME-FIRST"
+      ],
+      "steps": [
+        {
+          "activityId": "ACT-U1-S3-REWRITE-CLEANLY",
+          "lessonStepId": "STEP-U1-S3-REWRITE-CLEANLY",
+          "skillId": "U1-S3",
+          "activityType": "dialogue-flow",
+          "title": "Rewrite the Final Factorization Cleanly",
+          "openingLine": "Your split-work is close; now let's turn it into one clean final factorization.",
+          "firstTutorQuestion": "Which factors should still remain in the final line?",
+          "smallHint": "Keep only prime factors in the last line, and make sure none were dropped.",
+          "goodStoppingPoint": "Learner writes one complete prime factorization with no missing or composite factor."
+        },
+        {
+          "activityId": "ACT-U1-S4-VERIFY-PRIME-FIRST",
+          "lessonStepId": "STEP-U1-S4-VERIFY-PRIME-FIRST",
+          "skillId": "U1-S4",
+          "activityType": "worked-bridge",
+          "title": "Verification Bridge With 12",
+          "openingLine": "Let's check whether the answer is really prime factorization, not just a matching product.",
+          "firstTutorQuestion": "Before checking the product, are all the factors prime?",
+          "smallHint": "If one factor is composite, the answer is not finished yet.",
+          "goodStoppingPoint": "Learner rejects 2 x 6 because 6 is not prime and accepts 2 x 2 x 3."
+        }
+      ],
+      "completionRule": "complete_all_steps_in_order",
+      "lastEvaluation": {
+        "lessonStepId": "STEP-U1-S3-REWRITE-CLEANLY",
+        "decision": "completed",
+        "matchedRequiredSignals": [
+          "writes_only_prime_factors",
+          "keeps_all_factors"
+        ],
+        "missingRequiredSignals": [],
+        "matchedTextHints": [
+          "prime factors"
+        ],
+        "canAutoAdvance": true
+      },
+      "history": [
+        {
+          "attemptIndex": 0,
+          "lessonStepId": "STEP-U1-S3-REWRITE-CLEANLY",
+          "activityId": "ACT-U1-S3-REWRITE-CLEANLY",
+          "learnerResponse": "I rewrote the final answer using only prime factors and kept every factor.",
+          "fieldValues": {
+            "uses_only_prime_factors": true,
+            "keeps_all_factors": true
+          },
+          "tutorNote": "Learner rewrote the factorization cleanly without dropping any factors.",
+          "timestamp": "2026-03-26T10:00:00+09:00",
+          "evaluation": {
+            "lessonStepId": "STEP-U1-S3-REWRITE-CLEANLY",
+            "decision": "completed",
+            "matchedRequiredSignals": [
+              "writes_only_prime_factors",
+              "keeps_all_factors"
+            ],
+            "missingRequiredSignals": [],
+            "matchedTextHints": [
+              "prime factors"
+            ],
+            "canAutoAdvance": true
+          }
+        }
+      ]
+    }
+  ],
+  "evidenceEvents": [
+    {
+      "eventId": "session-history-0-STEP-U1-S3-REWRITE-CLEANLY",
+      "learnerId": "sample-learner",
+      "kind": "session_history_observation",
+      "skillId": "U1-S3",
+      "result": "correct",
+      "errorPatternIds": [],
+      "observations": [
+        "I rewrote the final answer using only prime factors and kept every factor.",
+        "Learner rewrote the factorization cleanly without dropping any factors."
+      ],
+      "confidenceSignal": "confident",
+      "sourceDocs": [],
+      "derivedFrom": {
+        "lessonStepId": "STEP-U1-S3-REWRITE-CLEANLY",
+        "activityId": "ACT-U1-S3-REWRITE-CLEANLY",
+        "matchedRequiredSignals": [
+          "writes_only_prime_factors",
+          "keeps_all_factors"
+        ],
+        "missingRequiredSignals": []
+      }
+    }
+  ],
+  "latestSkillSummaries": [
+    {
+      "learnerId": "sample-learner",
+      "skillId": "U1-S3",
+      "status": "evidence_positive_but_unapproved",
+      "statusApproval": "provisional",
+      "decisionType": "multi_event_rule_assisted_conservative",
+      "supportingEvidenceIds": [
+        "session-history-0-STEP-U1-S3-REWRITE-CLEANLY"
+      ],
+      "matchedErrorPatternIds": [],
+      "explanations": [
+        "The current event is positive evidence for the targeted skill.",
+        "The repository does not yet approve a threshold for promoting this to mastered."
+      ],
+      "blockedBy": [
+        "mastery labels are not finalized in docs/mastery-rules.md",
+        "minimum evidence required for pass remains UNDECIDED"
+      ],
+      "eventCount": 1,
+      "blockedByPrerequisites": [
+        {
+          "prerequisiteSkillId": "U1-S2",
+          "relationship": "HELPFUL",
+          "approvalStatus": "provisional",
+          "sourceDocs": [
+            "docs/prerequisite-map.md"
+          ],
+          "whyBlocked": "Prerequisite skill U1-S2 does not yet have learner evidence, so progress on U1-S3 should stay conservative."
+        }
+      ],
+      "hasRequiredPrerequisiteBlocker": false
+    }
+  ],
+  "latestRecommendations": [
+    {
+      "learnerId": "sample-learner",
+      "targetSkillId": "U1-S3",
+      "targetSkillTitle": "Express a number in prime factorized form",
+      "recommendationType": "practice",
+      "confidence": "limited",
+      "needsReview": true,
+      "reasonCodes": [
+        "documented_skill_target",
+        "mastery_thresholds_not_approved",
+        "helpful_prerequisite_blocker"
+      ],
+      "summary": "Conservative follow-up practice is recommended pending more evidence.",
+      "sourceDocs": [
+        "docs/suji-tutor-dialogue-flow-prime-factorization.md",
+        "docs/suji-subskills-prime-factorization.md"
+      ],
+      "recommendedActivities": [
+        {
+          "activityId": "ACT-U1-S3-REWRITE-CLEANLY",
+          "skillId": "U1-S3",
+          "activityType": "dialogue-flow",
+          "title": "Rewrite the Final Factorization Cleanly",
+          "goal": "Stabilize the move from split-work to a complete final prime factorization.",
+          "firstTutorQuestion": "Which factors should still remain in the final line?"
+        }
+      ],
+      "sessionPayload": {
+        "learnerId": "sample-learner",
+        "targetSkillId": "U1-S3",
+        "steps": [
+          {
+            "activityId": "ACT-U1-S2-ENTRY-BRIDGE",
+            "lessonStepId": "STEP-U1-S2-ENTRY-BRIDGE",
+            "skillId": "U1-S2",
+            "activityType": "worked-bridge",
+            "title": "Entry Bridge With 24",
+            "openingLine": "Let's just find one easy way into the problem instead of solving everything at once.",
+            "firstTutorQuestion": "What is the easiest divisor you can test first?",
+            "smallHint": "If the number is even, checking 2 is a calm first step.",
+            "goodStoppingPoint": "Learner starts with 2 for 24 and explains that 24 is even."
+          },
+          {
+            "activityId": "ACT-U1-S3-REWRITE-CLEANLY",
+            "lessonStepId": "STEP-U1-S3-REWRITE-CLEANLY",
+            "skillId": "U1-S3",
+            "activityType": "dialogue-flow",
+            "title": "Rewrite the Final Factorization Cleanly",
+            "openingLine": "Your split-work is close; now let's turn it into one clean final factorization.",
+            "firstTutorQuestion": "Which factors should still remain in the final line?",
+            "smallHint": "Keep only prime factors in the last line, and make sure none were dropped.",
+            "goodStoppingPoint": "Learner writes one complete prime factorization with no missing or composite factor."
+          }
+        ]
+      },
+      "sourceEventIds": [
+        "session-history-0-STEP-U1-S3-REWRITE-CLEANLY"
+      ],
+      "blockedByPrerequisites": [
+        {
+          "prerequisiteSkillId": "U1-S2",
+          "relationship": "HELPFUL",
+          "approvalStatus": "provisional",
+          "sourceDocs": [
+            "docs/prerequisite-map.md"
+          ],
+          "whyBlocked": "Prerequisite skill U1-S2 does not yet have learner evidence, so progress on U1-S3 should stay conservative."
+        }
+      ],
+      "recommendedNextSkillIds": [
+        "U1-S2",
+        "U1-S3"
+      ],
+      "recommendedActivitySequence": [
+        {
+          "activityId": "ACT-U1-S2-ENTRY-BRIDGE",
+          "skillId": "U1-S2",
+          "activityType": "worked-bridge",
+          "title": "Entry Bridge With 24",
+          "goal": "Rebuild the habit of starting with an easy divisor pair instead of freezing.",
+          "firstTutorQuestion": "What is the easiest divisor you can test first?"
+        },
+        {
+          "activityId": "ACT-U1-S3-REWRITE-CLEANLY",
+          "skillId": "U1-S3",
+          "activityType": "dialogue-flow",
+          "title": "Rewrite the Final Factorization Cleanly",
+          "goal": "Stabilize the move from split-work to a complete final prime factorization.",
+          "firstTutorQuestion": "Which factors should still remain in the final line?"
+        }
+      ]
+    }
+  ],
+  "updatedAt": "2026-03-26T10:00:00+09:00"
+}

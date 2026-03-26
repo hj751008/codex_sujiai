@@ -1,0 +1,86 @@
+[
+  {
+    "id": "U1-S1",
+    "title": "Identify prime, composite, and basic prime-number properties",
+    "status": "provisional",
+    "sourceDocs": [
+      "docs/mastery-rules.md"
+    ]
+  },
+  {
+    "id": "U1-S2",
+    "title": "Find the prime factors of a given natural number",
+    "status": "provisional",
+    "sourceDocs": [
+      "docs/mastery-rules.md"
+    ]
+  },
+  {
+    "id": "U1-S3",
+    "title": "Express a number in prime factorized form",
+    "status": "provisional",
+    "sourceDocs": [
+      "docs/mastery-rules.md"
+    ]
+  },
+  {
+    "id": "U1-S4",
+    "title": "Check whether a proposed prime-factor result is complete and valid",
+    "status": "provisional",
+    "sourceDocs": [
+      "docs/mastery-rules.md"
+    ]
+  },
+  {
+    "id": "U1-S5",
+    "title": "Use prime factorization in follow-up tasks such as divisor-count or square-making questions",
+    "status": "provisional",
+    "sourceDocs": [
+      "docs/mastery-rules.md"
+    ],
+    "notes": [
+      "This remains the documented parent transfer skill.",
+      "Draft child skills below are app-facing refinements derived from planning docs."
+    ]
+  },
+  {
+    "id": "U1-S5A",
+    "parentSkillId": "U1-S5",
+    "title": "Use prime factorization to reason about divisor count",
+    "status": "draft-from-docs",
+    "sourceDocs": [
+      "docs/suji-subskills-prime-factorization.md",
+      "docs/suji-error-patterns-prime-factorization.md"
+    ]
+  },
+  {
+    "id": "U1-S5B",
+    "parentSkillId": "U1-S5",
+    "title": "Use prime factorization to decide what factor is needed to make a square number",
+    "status": "draft-from-docs",
+    "sourceDocs": [
+      "docs/suji-subskills-prime-factorization.md",
+      "docs/suji-error-patterns-prime-factorization.md"
+    ]
+  },
+  {
+    "id": "U1-S5C",
+    "parentSkillId": "U1-S5",
+    "title": "Use factor structure when comparing common divisors or common multiples",
+    "status": "draft-from-docs",
+    "sourceDocs": [
+      "docs/suji-subskills-prime-factorization.md",
+      "docs/suji-error-patterns-prime-factorization.md"
+    ]
+  },
+  {
+    "id": "U1-S5D",
+    "parentSkillId": "U1-S5",
+    "title": "Explain which part of a prime factorization matters for a new question",
+    "status": "draft-from-docs",
+    "sourceDocs": [
+      "docs/suji-subskills-prime-factorization.md",
+      "docs/suji-error-patterns-prime-factorization.md"
+    ]
+  }
+]

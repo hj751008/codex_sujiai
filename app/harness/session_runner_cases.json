@@ -1,0 +1,40 @@
+[
+  {
+    "name": "two-step-session-lifecycle",
+    "recommendationFile": "app/domain/evidence/recommendation-with-session.example.json",
+    "expectedStart": {
+      "status": "in_progress",
+      "currentLessonStepId": "STEP-U1-S3-REWRITE-CLEANLY",
+      "nextLessonStepId": "STEP-U1-S4-VERIFY-PRIME-FIRST",
+      "remainingStepIds": [
+        "STEP-U1-S3-REWRITE-CLEANLY",
+        "STEP-U1-S4-VERIFY-PRIME-FIRST"
+      ]
+    },
+    "advanceSequence": [
+      {
+        "completeStep": "STEP-U1-S3-REWRITE-CLEANLY",
+        "expected": {
+          "status": "in_progress",
+          "currentLessonStepId": "STEP-U1-S4-VERIFY-PRIME-FIRST",
+          "nextLessonStepId": null,
+          "completedStepIds": [
+            "STEP-U1-S3-REWRITE-CLEANLY"
+          ]
+        }
+      },
+      {
+        "completeStep": "STEP-U1-S4-VERIFY-PRIME-FIRST",
+        "expected": {
+          "status": "completed",
+          "currentLessonStepId": null,
+          "nextLessonStepId": null,
+          "completedStepIds": [
+            "STEP-U1-S3-REWRITE-CLEANLY",
+            "STEP-U1-S4-VERIFY-PRIME-FIRST"
+          ]
+        }
+      }
+    ]
+  }
+]

@@ -1,0 +1,44 @@
+[
+  {
+    "eventId": "learner-example-001",
+    "learnerId": "sample-learner",
+    "kind": "tutor_observation",
+    "skillId": "U1-S1",
+    "result": "incorrect",
+    "errorPatternIds": [
+      "u1-s1-one-is-prime"
+    ],
+    "observations": [
+      "Learner says 1 is prime."
+    ],
+    "confidenceSignal": "hesitant"
+  },
+  {
+    "eventId": "learner-example-002",
+    "learnerId": "sample-learner",
+    "kind": "worked_example_observation",
+    "skillId": "U1-S4",
+    "result": "partial",
+    "errorPatternIds": [
+      "u1-s4-non-prime-factor-accepted"
+    ],
+    "observations": [
+      "Learner checks only the product."
+    ],
+    "confidenceSignal": "hesitant"
+  },
+  {
+    "eventId": "learner-example-003",
+    "learnerId": "sample-learner",
+    "kind": "application_observation",
+    "skillId": "U1-S5A",
+    "result": "incorrect",
+    "errorPatternIds": [
+      "u1-s5a-divisor-count-restart"
+    ],
+    "observations": [
+      "Learner restarts divisor counting from scratch."
+    ],
+    "confidenceSignal": "hesitant"
+  }
+]

@@ -1,0 +1,1 @@
+"""sujimathAI app package."""

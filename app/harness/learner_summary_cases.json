@@ -1,0 +1,175 @@
+[
+  {
+    "name": "multi-skill-struggle-summary",
+    "events": [
+      {
+        "eventId": "summary-case-001",
+        "learnerId": "summary-learner",
+        "kind": "tutor_observation",
+        "skillId": "U1-S1",
+        "result": "incorrect",
+        "errorPatternIds": [
+          "u1-s1-one-is-prime"
+        ],
+        "observations": [
+          "Learner says 1 is prime."
+        ],
+        "confidenceSignal": "hesitant"
+      },
+      {
+        "eventId": "summary-case-002",
+        "learnerId": "summary-learner",
+        "kind": "worked_example_observation",
+        "skillId": "U1-S4",
+        "result": "partial",
+        "errorPatternIds": [
+          "u1-s4-non-prime-factor-accepted"
+        ],
+        "observations": [
+          "Learner checks only the product."
+        ],
+        "confidenceSignal": "hesitant"
+      },
+      {
+        "eventId": "summary-case-003",
+        "learnerId": "summary-learner",
+        "kind": "application_observation",
+        "skillId": "U1-S5A",
+        "result": "incorrect",
+        "errorPatternIds": [
+          "u1-s5a-divisor-count-restart"
+        ],
+        "observations": [
+          "Learner restarts divisor counting from scratch."
+        ],
+        "confidenceSignal": "hesitant"
+      }
+    ],
+    "expected": {
+      "skillIds": [
+        "U1-S4",
+        "U1-S1",
+        "U1-S5A"
+      ],
+      "statuses": {
+        "U1-S1": "developing",
+        "U1-S4": "developing",
+        "U1-S5A": "developing"
+      },
+      "requiredBlockedSkills": [
+        "U1-S4"
+      ],
+      "helpfulBlockedSkills": [
+        "U1-S5A"
+      ],
+      "recommendationSkillIds": [
+        "U1-S4",
+        "U1-S5A",
+        "U1-S1"
+      ],
+      "recommendedNextSkillIds": {
+        "U1-S4": [
+          "U1-S3",
+          "U1-S4"
+        ],
+        "U1-S1": [
+          "U1-S1"
+        ],
+        "U1-S5A": [
+          "U1-S3",
+          "U1-S5A"
+        ]
+      },
+      "recommendedActivitySequenceIds": {
+        "U1-S4": [
+          "ACT-U1-S3-REWRITE-CLEANLY",
+          "ACT-U1-S4-VERIFY-PRIME-FIRST"
+        ],
+        "U1-S1": [
+          "ACT-U1-S1-CONCEPT-CHECK"
+        ],
+        "U1-S5A": [
+          "ACT-U1-S3-REWRITE-CLEANLY",
+          "ACT-U1-S5A-DIVISOR-COUNT-TRANSFER"
+        ]
+      },
+      "sessionLessonStepIds": {
+        "U1-S4": [
+          "STEP-U1-S3-REWRITE-CLEANLY",
+          "STEP-U1-S4-VERIFY-PRIME-FIRST"
+        ],
+        "U1-S1": [
+          "STEP-U1-S1-CONCEPT-CHECK"
+        ],
+        "U1-S5A": [
+          "STEP-U1-S3-REWRITE-CLEANLY",
+          "STEP-U1-S5A-DIVISOR-COUNT-TRANSFER"
+        ]
+      }
+    }
+  },
+  {
+    "name": "mixed-positive-and-struggle-same-skill",
+    "events": [
+      {
+        "eventId": "summary-case-101",
+        "learnerId": "summary-learner-2",
+        "kind": "worked_example_observation",
+        "skillId": "U1-S3",
+        "result": "correct",
+        "errorPatternIds": [],
+        "observations": [
+          "Learner writes one complete prime factorization correctly."
+        ],
+        "confidenceSignal": "confident"
+      },
+      {
+        "eventId": "summary-case-102",
+        "learnerId": "summary-learner-2",
+        "kind": "worked_example_observation",
+        "skillId": "U1-S3",
+        "result": "partial",
+        "errorPatternIds": [
+          "u1-s3-missing-repeated-prime-factor"
+        ],
+        "observations": [
+          "Learner later omits one repeated factor."
+        ],
+        "confidenceSignal": "hesitant"
+      }
+    ],
+    "expected": {
+      "skillIds": [
+        "U1-S3"
+      ],
+      "statuses": {
+        "U1-S3": "developing"
+      },
+      "requiredBlockedSkills": [],
+      "helpfulBlockedSkills": [
+        "U1-S3"
+      ],
+      "recommendationSkillIds": [
+        "U1-S3"
+      ],
+      "recommendedNextSkillIds": {
+        "U1-S3": [
+          "U1-S2",
+          "U1-S3"
+        ]
+      },
+      "recommendedActivitySequenceIds": {
+        "U1-S3": [
+          "ACT-U1-S2-ENTRY-BRIDGE",
+          "ACT-U1-S3-REWRITE-CLEANLY"
+        ]
+      },
+      "sessionLessonStepIds": {
+        "U1-S3": [
+          "STEP-U1-S2-ENTRY-BRIDGE",
+          "STEP-U1-S3-REWRITE-CLEANLY"
+        ]
+      }
+    }
+  }
+]

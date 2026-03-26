@@ -1,0 +1,58 @@
+{
+  "learnerId": "sample-learner",
+  "targetSkillId": "U1-S4",
+  "status": "in_progress",
+  "currentStepIndex": 0,
+  "currentStep": {
+    "activityId": "ACT-U1-S3-REWRITE-CLEANLY",
+    "lessonStepId": "STEP-U1-S3-REWRITE-CLEANLY",
+    "skillId": "U1-S3",
+    "activityType": "dialogue-flow",
+    "title": "Rewrite the Final Factorization Cleanly",
+    "openingLine": "Your split-work is close; now let's turn it into one clean final factorization.",
+    "firstTutorQuestion": "Which factors should still remain in the final line?",
+    "smallHint": "Keep only prime factors in the last line, and make sure none were dropped.",
+    "goodStoppingPoint": "Learner writes one complete prime factorization with no missing or composite factor."
+  },
+  "nextStep": {
+    "activityId": "ACT-U1-S4-VERIFY-PRIME-FIRST",
+    "lessonStepId": "STEP-U1-S4-VERIFY-PRIME-FIRST",
+    "skillId": "U1-S4",
+    "activityType": "worked-bridge",
+    "title": "Verification Bridge With 12",
+    "openingLine": "Let's check whether the answer is really prime factorization, not just a matching product.",
+    "firstTutorQuestion": "Before checking the product, are all the factors prime?",
+    "smallHint": "If one factor is composite, the answer is not finished yet.",
+    "goodStoppingPoint": "Learner rejects 2 x 6 because 6 is not prime and accepts 2 x 2 x 3."
+  },
+  "completedStepIds": [],
+  "remainingStepIds": [
+    "STEP-U1-S3-REWRITE-CLEANLY",
+    "STEP-U1-S4-VERIFY-PRIME-FIRST"
+  ],
+  "steps": [
+    {
+      "activityId": "ACT-U1-S3-REWRITE-CLEANLY",
+      "lessonStepId": "STEP-U1-S3-REWRITE-CLEANLY",
+      "skillId": "U1-S3",
+      "activityType": "dialogue-flow",
+      "title": "Rewrite the Final Factorization Cleanly",
+      "openingLine": "Your split-work is close; now let's turn it into one clean final factorization.",
+      "firstTutorQuestion": "Which factors should still remain in the final line?",
+      "smallHint": "Keep only prime factors in the last line, and make sure none were dropped.",
+      "goodStoppingPoint": "Learner writes one complete prime factorization with no missing or composite factor."
+    },
+    {
+      "activityId": "ACT-U1-S4-VERIFY-PRIME-FIRST",
+      "lessonStepId": "STEP-U1-S4-VERIFY-PRIME-FIRST",
+      "skillId": "U1-S4",
+      "activityType": "worked-bridge",
+      "title": "Verification Bridge With 12",
+      "openingLine": "Let's check whether the answer is really prime factorization, not just a matching product.",
+      "firstTutorQuestion": "Before checking the product, are all the factors prime?",
+      "smallHint": "If one factor is composite, the answer is not finished yet.",
+      "goodStoppingPoint": "Learner rejects 2 x 6 because 6 is not prime and accepts 2 x 2 x 3."
+    }
+  ],
+  "completionRule": "complete_all_steps_in_order"
+}

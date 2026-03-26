@@ -1,0 +1,27 @@
+[
+  {
+    "name": "session-history-reuses-observation-as-learner-evidence",
+    "sessionFile": "app/domain/evidence/session-state.example.json",
+    "observationFormInput": {
+      "learnerResponse": "I rewrote the final answer using only prime factors and kept every factor.",
+      "fieldValues": {
+        "uses_only_prime_factors": true,
+        "keeps_all_factors": true
+      },
+      "tutorNote": "Learner completed the rewrite step cleanly.",
+      "timestamp": "2026-03-26T10:00:00+09:00"
+    },
+    "expected": {
+      "eventCount": 1,
+      "eventSkillIds": [
+        "U1-S3"
+      ],
+      "summarySkillIds": [
+        "U1-S3"
+      ],
+      "summaryStatuses": {
+        "U1-S3": "evidence_positive_but_unapproved"
+      }
+    }
+  }
+]

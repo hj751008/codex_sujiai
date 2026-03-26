@@ -1,0 +1,15 @@
+[
+  {
+    "name": "plan-next-session-from-learner-record",
+    "learnerFile": "app/domain/evidence/learner-record-with-summary.example.json",
+    "expected": {
+      "plannedFromSkillId": "U1-S3",
+      "recommendedNextSkillIds": [
+        "U1-S2",
+        "U1-S3"
+      ],
+      "firstLessonStepId": "STEP-U1-S2-ENTRY-BRIDGE",
+      "stepCount": 2
+    }
+  }
+]

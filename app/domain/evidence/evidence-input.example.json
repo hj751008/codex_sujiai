@@ -1,0 +1,21 @@
+{
+  "eventId": "example-u1-s1-001",
+  "learnerId": "sample-learner",
+  "kind": "tutor_observation",
+  "skillId": "U1-S1",
+  "result": "incorrect",
+  "errorPatternIds": [
+    "u1-s1-one-is-prime"
+  ],
+  "observations": [
+    "Learner says that 1 is prime because it is divisible by 1."
+  ],
+  "confidenceSignal": "hesitant",
+  "sourceDocs": [
+    "docs/suji-error-patterns-prime-factorization.md"
+  ],
+  "notes": [
+    "This is the concrete input shape expected by the first CLI diagnose flow.",
+    "The app uses conservative provisional statuses rather than pass/fail mastery."
+  ]
+}

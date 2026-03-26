@@ -1,0 +1,123 @@
+[
+  {
+    "lessonStepId": "STEP-U1-S1-CONCEPT-CHECK",
+    "status": "draft-from-docs",
+    "requiredSignals": [
+      "says_neither_prime_nor_composite",
+      "gives_divisor_based_reason"
+    ],
+    "optionalTextHints": [
+      "neither",
+      "divisor"
+    ],
+    "sourceDocs": [
+      "docs/suji-tutor-dialogue-flow-prime-factorization.md",
+      "docs/suji-error-patterns-prime-factorization.md"
+    ]
+  },
+  {
+    "lessonStepId": "STEP-U1-S2-ENTRY-BRIDGE",
+    "status": "draft-from-docs",
+    "requiredSignals": [
+      "chooses_two_as_start",
+      "notes_even_number"
+    ],
+    "optionalTextHints": [
+      "2",
+      "even"
+    ],
+    "sourceDocs": [
+      "docs/suji-worked-bridge-prime-factorization-entry.md"
+    ]
+  },
+  {
+    "lessonStepId": "STEP-U1-S3-REWRITE-CLEANLY",
+    "status": "draft-from-docs",
+    "requiredSignals": [
+      "writes_only_prime_factors",
+      "keeps_all_factors"
+    ],
+    "optionalTextHints": [
+      "prime factors",
+      "final line"
+    ],
+    "sourceDocs": [
+      "docs/suji-tutor-dialogue-flow-prime-factorization.md",
+      "docs/suji-subskills-prime-factorization.md"
+    ]
+  },
+  {
+    "lessonStepId": "STEP-U1-S4-VERIFY-PRIME-FIRST",
+    "status": "draft-from-docs",
+    "requiredSignals": [
+      "rejects_composite_factor_answer",
+      "selects_all_prime_answer"
+    ],
+    "optionalTextHints": [
+      "6 is not prime",
+      "2 x 2 x 3"
+    ],
+    "sourceDocs": [
+      "docs/suji-worked-bridge-prime-factorization-verification.md"
+    ]
+  },
+  {
+    "lessonStepId": "STEP-U1-S5A-DIVISOR-COUNT-TRANSFER",
+    "status": "draft-from-docs",
+    "requiredSignals": [
+      "starts_from_factorization",
+      "does_not_list_divisors_blindly"
+    ],
+    "optionalTextHints": [
+      "factorization",
+      "divisor count"
+    ],
+    "sourceDocs": [
+      "docs/suji-tutor-dialogue-flow-prime-factorization.md",
+      "docs/suji-subskills-prime-factorization.md"
+    ]
+  },
+  {
+    "lessonStepId": "STEP-U1-S5B-SQUARE-NUMBER",
+    "status": "draft-from-docs",
+    "requiredSignals": [
+      "identifies_missing_factor",
+      "explains_even_exponent_goal"
+    ],
+    "optionalTextHints": [
+      "missing factor",
+      "even"
+    ],
+    "sourceDocs": [
+      "docs/suji-tutor-dialogue-flow-prime-factorization.md"
+    ]
+  },
+  {
+    "lessonStepId": "STEP-U1-S5C-GCD-LCM-SORT",
+    "status": "draft-from-docs",
+    "requiredSignals": [
+      "names_shared_vs_covering_structure"
+    ],
+    "optionalTextHints": [
+      "overlap",
+      "cover"
+    ],
+    "sourceDocs": [
+      "docs/suji-tutor-dialogue-flow-prime-factorization.md"
+    ]
+  },
+  {
+    "lessonStepId": "STEP-U1-S5D-RELEVANT-PART-EXPLAIN",
+    "status": "draft-from-docs",
+    "requiredSignals": [
+      "points_to_relevant_part_before_solving"
+    ],
+    "optionalTextHints": [
+      "this part",
+      "first"
+    ],
+    "sourceDocs": [
+      "docs/suji-tutor-dialogue-flow-prime-factorization.md"
+    ]
+  }
+]

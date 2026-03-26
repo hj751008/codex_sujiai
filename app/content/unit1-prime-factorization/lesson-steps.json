@@ -1,0 +1,106 @@
+[
+  {
+    "lessonStepId": "STEP-U1-S1-CONCEPT-CHECK",
+    "activityId": "ACT-U1-S1-CONCEPT-CHECK",
+    "status": "draft-from-docs",
+    "openingLine": "Let's slow down and check what makes a number prime before we calculate anything.",
+    "firstTutorQuestion": "How many divisors does 1 actually have?",
+    "smallHint": "A prime number must have exactly two divisors: 1 and itself.",
+    "goodStoppingPoint": "Learner says 1 is neither prime nor composite and gives a divisor-based reason.",
+    "sourceDocs": [
+      "docs/suji-tutor-dialogue-flow-prime-factorization.md",
+      "docs/suji-error-patterns-prime-factorization.md"
+    ]
+  },
+  {
+    "lessonStepId": "STEP-U1-S2-ENTRY-BRIDGE",
+    "activityId": "ACT-U1-S2-ENTRY-BRIDGE",
+    "status": "draft-from-docs",
+    "openingLine": "Let's just find one easy way into the problem instead of solving everything at once.",
+    "firstTutorQuestion": "What is the easiest divisor you can test first?",
+    "smallHint": "If the number is even, checking 2 is a calm first step.",
+    "goodStoppingPoint": "Learner starts with 2 for 24 and explains that 24 is even.",
+    "sourceDocs": [
+      "docs/suji-worked-bridge-prime-factorization-entry.md",
+      "docs/suji-tutor-dialogue-flow-prime-factorization.md"
+    ]
+  },
+  {
+    "lessonStepId": "STEP-U1-S3-REWRITE-CLEANLY",
+    "activityId": "ACT-U1-S3-REWRITE-CLEANLY",
+    "status": "draft-from-docs",
+    "openingLine": "Your split-work is close; now let's turn it into one clean final factorization.",
+    "firstTutorQuestion": "Which factors should still remain in the final line?",
+    "smallHint": "Keep only prime factors in the last line, and make sure none were dropped.",
+    "goodStoppingPoint": "Learner writes one complete prime factorization with no missing or composite factor.",
+    "sourceDocs": [
+      "docs/suji-tutor-dialogue-flow-prime-factorization.md",
+      "docs/suji-subskills-prime-factorization.md"
+    ]
+  },
+  {
+    "lessonStepId": "STEP-U1-S4-VERIFY-PRIME-FIRST",
+    "activityId": "ACT-U1-S4-VERIFY-PRIME-FIRST",
+    "status": "draft-from-docs",
+    "openingLine": "Let's check whether the answer is really prime factorization, not just a matching product.",
+    "firstTutorQuestion": "Before checking the product, are all the factors prime?",
+    "smallHint": "If one factor is composite, the answer is not finished yet.",
+    "goodStoppingPoint": "Learner rejects 2 x 6 because 6 is not prime and accepts 2 x 2 x 3.",
+    "sourceDocs": [
+      "docs/suji-worked-bridge-prime-factorization-verification.md",
+      "docs/suji-tutor-dialogue-flow-prime-factorization.md"
+    ]
+  },
+  {
+    "lessonStepId": "STEP-U1-S5A-DIVISOR-COUNT-TRANSFER",
+    "activityId": "ACT-U1-S5A-DIVISOR-COUNT-TRANSFER",
+    "status": "draft-from-docs",
+    "openingLine": "You do not need to restart from zero here; let's reuse what the factorization already tells us.",
+    "firstTutorQuestion": "In this problem, do you need the factorization itself or the number of divisors?",
+    "smallHint": "Write the prime factorization first, then use it instead of listing divisors one by one.",
+    "goodStoppingPoint": "Learner starts the divisor-count task from the factorization rather than restarting blindly.",
+    "sourceDocs": [
+      "docs/suji-tutor-dialogue-flow-prime-factorization.md",
+      "docs/suji-subskills-prime-factorization.md"
+    ]
+  },
+  {
+    "lessonStepId": "STEP-U1-S5B-SQUARE-NUMBER",
+    "activityId": "ACT-U1-S5B-SQUARE-NUMBER",
+    "status": "draft-from-docs",
+    "openingLine": "Let's look for the one missing factor that would make every prime count even.",
+    "firstTutorQuestion": "Which prime factor count is odd right now and needs one more?",
+    "smallHint": "Square numbers need each prime factor to appear an even number of times.",
+    "goodStoppingPoint": "Learner identifies the missing factor and explains why it completes the square structure.",
+    "sourceDocs": [
+      "docs/suji-tutor-dialogue-flow-prime-factorization.md",
+      "docs/suji-error-patterns-prime-factorization.md"
+    ]
+  },
+  {
+    "lessonStepId": "STEP-U1-S5C-GCD-LCM-SORT",
+    "activityId": "ACT-U1-S5C-GCD-LCM-SORT",
+    "status": "draft-from-docs",
+    "openingLine": "Before calculating, let's decide what kind of structure this question is asking for.",
+    "firstTutorQuestion": "Are you looking for what overlaps or what covers both numbers?",
+    "smallHint": "Common divisor looks for shared structure, while common multiple must cover both numbers.",
+    "goodStoppingPoint": "Learner says which structure to look for before trying the calculation.",
+    "sourceDocs": [
+      "docs/suji-tutor-dialogue-flow-prime-factorization.md",
+      "docs/suji-error-patterns-prime-factorization.md"
+    ]
+  },
+  {
+    "lessonStepId": "STEP-U1-S5D-RELEVANT-PART-EXPLAIN",
+    "activityId": "ACT-U1-S5D-RELEVANT-PART-EXPLAIN",
+    "status": "draft-from-docs",
+    "openingLine": "Let's name which part of the factorization matters before solving the transfer question.",
+    "firstTutorQuestion": "Which part of the factorization helps you answer this question first?",
+    "smallHint": "Do not use the whole factorization blindly; point to the part that matters here.",
+    "goodStoppingPoint": "Learner identifies the relevant part of the factorization before using it.",
+    "sourceDocs": [
+      "docs/suji-tutor-dialogue-flow-prime-factorization.md",
+      "docs/suji-error-patterns-prime-factorization.md"
+    ]
+  }
+]

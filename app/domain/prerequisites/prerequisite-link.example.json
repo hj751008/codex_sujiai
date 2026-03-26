@@ -1,0 +1,14 @@
+{
+  "prerequisiteSkillId": "U1-S3",
+  "targetSkillId": "U1-S4",
+  "relationship": "REQUIRED",
+  "approvalStatus": "provisional",
+  "evidenceSummary": "Same-unit worked examples suggest learners need factorized-form understanding before validating completeness and correctness.",
+  "sourceDocs": [
+    "docs/prerequisite-map.md"
+  ],
+  "notes": [
+    "Relationship labels may be approved while specific links remain provisional.",
+    "App logic must preserve provisional status instead of treating it as settled policy."
+  ]
+}

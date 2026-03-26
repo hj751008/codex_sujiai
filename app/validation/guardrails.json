@@ -1,0 +1,20 @@
+{
+  "rules": [
+    {
+      "id": "no-hidden-thresholds",
+      "description": "Do not store numeric mastery thresholds unless they are approved in repository docs."
+    },
+    {
+      "id": "preserve-provisional-status",
+      "description": "Prerequisite and recommendation records must preserve whether a rule is provisional or approved."
+    },
+    {
+      "id": "require-source-docs",
+      "description": "Reviewable logic records must cite the source document that justifies them."
+    },
+    {
+      "id": "allow-needs-review",
+      "description": "Recommendation outputs should support conservative fallback states such as needs review or insufficient evidence."
+    }
+  ]
+}

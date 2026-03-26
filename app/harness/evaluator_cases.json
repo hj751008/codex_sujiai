@@ -1,0 +1,68 @@
+[
+  {
+    "name": "completes-current-step-and-advances",
+    "sessionFile": "app/domain/evidence/session-state.example.json",
+    "evaluationInput": {
+      "learnerResponse": "I rewrote the final answer using only prime factors and kept every factor.",
+      "observedSignals": [
+        "writes_only_prime_factors",
+        "keeps_all_factors"
+      ]
+    },
+    "expectedEvaluation": {
+      "lessonStepId": "STEP-U1-S3-REWRITE-CLEANLY",
+      "decision": "completed",
+      "canAutoAdvance": true
+    },
+    "expectedAppliedState": {
+      "status": "in_progress",
+      "currentLessonStepId": "STEP-U1-S4-VERIFY-PRIME-FIRST",
+      "completedStepIds": [
+        "STEP-U1-S3-REWRITE-CLEANLY"
+      ]
+    }
+  },
+  {
+    "name": "partial-signal-stays-on-step",
+    "sessionFile": "app/domain/evidence/session-state.example.json",
+    "evaluationInput": {
+      "learnerResponse": "I rewrote it with prime factors, but I am not sure if I kept everything.",
+      "observedSignals": [
+        "writes_only_prime_factors"
+      ]
+    },
+    "expectedEvaluation": {
+      "lessonStepId": "STEP-U1-S3-REWRITE-CLEANLY",
+      "decision": "needs_follow_up",
+      "canAutoAdvance": false
+    },
+    "expectedAppliedState": {
+      "status": "in_progress",
+      "currentLessonStepId": "STEP-U1-S3-REWRITE-CLEANLY",
+      "completedStepIds": []
+    }
+  },
+  {
+    "name": "observation-form-translates-and-advances",
+    "sessionFile": "app/domain/evidence/session-state.example.json",
+    "observationFormInput": {
+      "learnerResponse": "I rewrote the final answer using only prime factors and kept every factor.",
+      "fieldValues": {
+        "uses_only_prime_factors": true,
+        "keeps_all_factors": true
+      }
+    },
+    "expectedEvaluation": {
+      "lessonStepId": "STEP-U1-S3-REWRITE-CLEANLY",
+      "decision": "completed",
+      "canAutoAdvance": true
+    },
+    "expectedAppliedState": {
+      "status": "in_progress",
+      "currentLessonStepId": "STEP-U1-S4-VERIFY-PRIME-FIRST",
+      "completedStepIds": [
+        "STEP-U1-S3-REWRITE-CLEANLY"
+      ]
+    }
+  }
+]

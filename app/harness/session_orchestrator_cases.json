@@ -1,0 +1,21 @@
+[
+  {
+    "name": "resume latest active session when resumable snapshot exists",
+    "learnerFile": "app/domain/evidence/learner-record-with-active-session.example.json",
+    "expected": {
+      "action": "resume_session",
+      "targetSkillId": "U1-S4",
+      "currentLessonStepId": "STEP-U1-S4-VERIFY-PRIME-FIRST",
+      "remainingStepCount": 1
+    }
+  },
+  {
+    "name": "plan a new session when no resumable session exists",
+    "learnerFile": "app/domain/evidence/learner-record-with-summary.example.json",
+    "expected": {
+      "action": "plan_new_session",
+      "plannedFromSkillId": "U1-S3",
+      "firstLessonStepId": "STEP-U1-S2-ENTRY-BRIDGE"
+    }
+  }
+]

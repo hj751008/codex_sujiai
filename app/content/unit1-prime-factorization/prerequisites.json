@@ -1,0 +1,74 @@
+[
+  {
+    "prerequisiteSkillId": "U1-S1",
+    "targetSkillId": "U1-S2",
+    "relationship": "HELPFUL",
+    "approvalStatus": "provisional",
+    "sourceDocs": [
+      "docs/prerequisite-map.md"
+    ]
+  },
+  {
+    "prerequisiteSkillId": "U1-S2",
+    "targetSkillId": "U1-S3",
+    "relationship": "HELPFUL",
+    "approvalStatus": "provisional",
+    "sourceDocs": [
+      "docs/prerequisite-map.md"
+    ]
+  },
+  {
+    "prerequisiteSkillId": "U1-S3",
+    "targetSkillId": "U1-S4",
+    "relationship": "REQUIRED",
+    "approvalStatus": "provisional",
+    "sourceDocs": [
+      "docs/prerequisite-map.md"
+    ]
+  },
+  {
+    "prerequisiteSkillId": "U1-S3",
+    "targetSkillId": "U1-S5",
+    "relationship": "HELPFUL",
+    "approvalStatus": "provisional",
+    "sourceDocs": [
+      "docs/prerequisite-map.md"
+    ]
+  },
+  {
+    "prerequisiteSkillId": "U1-S3",
+    "targetSkillId": "U1-S5A",
+    "relationship": "HELPFUL",
+    "approvalStatus": "draft-from-docs",
+    "sourceDocs": [
+      "docs/suji-subskills-prime-factorization.md"
+    ]
+  },
+  {
+    "prerequisiteSkillId": "U1-S3",
+    "targetSkillId": "U1-S5B",
+    "relationship": "HELPFUL",
+    "approvalStatus": "draft-from-docs",
+    "sourceDocs": [
+      "docs/suji-subskills-prime-factorization.md"
+    ]
+  },
+  {
+    "prerequisiteSkillId": "U1-S3",
+    "targetSkillId": "U1-S5C",
+    "relationship": "HELPFUL",
+    "approvalStatus": "draft-from-docs",
+    "sourceDocs": [
+      "docs/suji-subskills-prime-factorization.md"
+    ]
+  },
+  {
+    "prerequisiteSkillId": "U1-S3",
+    "targetSkillId": "U1-S5D",
+    "relationship": "HELPFUL",
+    "approvalStatus": "draft-from-docs",
+    "sourceDocs": [
+      "docs/suji-subskills-prime-factorization.md"
+    ]
+  }
+]

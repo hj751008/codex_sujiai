@@ -1,0 +1,25 @@
+[
+  {
+    "name": "observation-submission-appends-history-and-advances",
+    "sessionFile": "app/domain/evidence/session-state.example.json",
+    "observationFormInput": {
+      "learnerResponse": "I rewrote the final answer using only prime factors and kept every factor.",
+      "fieldValues": {
+        "uses_only_prime_factors": true,
+        "keeps_all_factors": true
+      },
+      "tutorNote": "Learner completed the rewrite step cleanly.",
+      "timestamp": "2026-03-26T10:00:00+09:00"
+    },
+    "expected": {
+      "status": "in_progress",
+      "currentLessonStepId": "STEP-U1-S4-VERIFY-PRIME-FIRST",
+      "completedStepIds": [
+        "STEP-U1-S3-REWRITE-CLEANLY"
+      ],
+      "historyCount": 1,
+      "historyLessonStepId": "STEP-U1-S3-REWRITE-CLEANLY",
+      "historyDecision": "completed"
+    }
+  }
+]

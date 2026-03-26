@@ -1,0 +1,69 @@
+[
+  {
+    "when": "Learner misses prime/composite property items.",
+    "recommend": "U1-S1",
+    "confidence": "limited",
+    "needsReview": true,
+    "sourceDocs": [
+      "docs/recommendation-rules.md"
+    ]
+  },
+  {
+    "when": "Learner can attempt factorization but misses whether all prime factors are present.",
+    "recommend": "U1-S4",
+    "confidence": "limited",
+    "needsReview": true,
+    "sourceDocs": [
+      "docs/recommendation-rules.md"
+    ]
+  },
+  {
+    "when": "Learner can factorize but struggles on application questions.",
+    "recommend": "U1-S5",
+    "confidence": "limited",
+    "needsReview": true,
+    "sourceDocs": [
+      "docs/recommendation-rules.md"
+    ]
+  },
+  {
+    "when": "Learner restarts from scratch instead of using factorization to reason about divisor count.",
+    "recommend": "U1-S5A",
+    "confidence": "limited",
+    "needsReview": true,
+    "sourceDocs": [
+      "docs/suji-subskills-prime-factorization.md",
+      "docs/suji-error-patterns-prime-factorization.md"
+    ]
+  },
+  {
+    "when": "Learner cannot identify the missing factor needed to make a square number.",
+    "recommend": "U1-S5B",
+    "confidence": "limited",
+    "needsReview": true,
+    "sourceDocs": [
+      "docs/suji-subskills-prime-factorization.md",
+      "docs/suji-error-patterns-prime-factorization.md"
+    ]
+  },
+  {
+    "when": "Learner mixes common-divisor and common-multiple reasoning in transfer tasks.",
+    "recommend": "U1-S5C",
+    "confidence": "limited",
+    "needsReview": true,
+    "sourceDocs": [
+      "docs/suji-subskills-prime-factorization.md",
+      "docs/suji-error-patterns-prime-factorization.md"
+    ]
+  },
+  {
+    "when": "Learner uses factorization mechanically but cannot explain which part matters for the new question.",
+    "recommend": "U1-S5D",
+    "confidence": "limited",
+    "needsReview": true,
+    "sourceDocs": [
+      "docs/suji-subskills-prime-factorization.md",
+      "docs/suji-error-patterns-prime-factorization.md"
+    ]
+  }
+]
