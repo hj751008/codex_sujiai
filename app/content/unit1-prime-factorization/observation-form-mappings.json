@@ -161,6 +161,13 @@
         "label": "Names overlap vs cover",
         "prompt": "Did the learner say whether the task asks for overlap or for covering both numbers?",
         "trueMeans": "The learner classified the task before starting arithmetic."
+      },
+      {
+        "fieldId": "delays_calculation_until_structure_named",
+        "signalOnTrue": "delays_calculation_until_structure_named",
+        "label": "Delays calculation",
+        "prompt": "Did the learner hold off on arithmetic until the task type was named clearly?",
+        "trueMeans": "The learner kept calculation secondary until the structure was identified."
       }
     ],
     "sourceDocs": [
@@ -179,6 +186,13 @@
         "label": "Points to relevant part",
         "prompt": "Did the learner identify the relevant part of the factorization before solving?",
         "trueMeans": "The learner selected the useful factor or exponent before doing the transfer task."
+      },
+      {
+        "fieldId": "explains_why_that_part_matters",
+        "signalOnTrue": "explains_why_part_is_relevant",
+        "label": "Explains why it matters",
+        "prompt": "Did the learner explain why that selected factor or exponent is the useful part for this question?",
+        "trueMeans": "The learner justified the choice of relevant part instead of only pointing to it."
       }
     ],
     "sourceDocs": [

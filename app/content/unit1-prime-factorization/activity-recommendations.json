@@ -127,13 +127,14 @@
     "title": "Sort Common Divisor vs Common Multiple",
     "goal": "Help the learner name which structure to look for before calculating.",
     "firstTutorQuestion": "Are you looking for what overlaps or what covers both numbers?",
-    "operatorFocus": "Get the learner to classify the structure before any arithmetic.",
+    "operatorFocus": "Get the learner to classify the structure before any arithmetic and keep them from computing too early.",
     "watchFor": [
       "Learner starts calculating without deciding whether the task is GCD or LCM.",
-      "Learner uses the word 'common' but cannot distinguish shared from covering structure."
+      "Learner uses the word 'common' but cannot distinguish shared from covering structure.",
+      "Learner classifies correctly once but then falls back into calculation-first behavior."
     ],
-    "exampleTutorMove": "Say 'overlap or cover?' before writing any factors on the page.",
-    "successSignal": "Learner can say whether the task is about shared structure or covering structure before solving.",
+    "exampleTutorMove": "Pause the learner at the first arithmetic move and ask them to restate whether this is an overlap task or a cover-both task.",
+    "successSignal": "Learner names the task type and keeps calculation on hold until that structure is clear.",
     "sourceDocs": [
       "docs/suji-tutor-dialogue-flow-prime-factorization.md",
       "docs/suji-error-patterns-prime-factorization.md"
@@ -147,13 +148,14 @@
     "title": "Explain Which Part of the Factorization Matters",
     "goal": "Make the learner point to the relevant part of the factorization before solving a transfer task.",
     "firstTutorQuestion": "Which part of the factorization helps you answer this question first?",
-    "operatorFocus": "Make the learner point to the useful part before they compute.",
+    "operatorFocus": "Make the learner point to the useful part before they compute and say why that part matters.",
     "watchFor": [
       "Learner recites the entire factorization without selecting the relevant part.",
-      "Learner solves mechanically and only explains after the answer."
+      "Learner solves mechanically and only explains after the answer.",
+      "Learner points to a part but gives no reason for choosing it."
     ],
-    "exampleTutorMove": "Pause the learner and ask them to underline the part of the factorization they plan to use.",
-    "successSignal": "Learner identifies the relevant part of the factorization before using it.",
+    "exampleTutorMove": "Pause the learner and ask them to underline the part of the factorization they plan to use and say why that part answers this question.",
+    "successSignal": "Learner identifies the relevant part of the factorization before using it and explains why that part is the useful one.",
     "sourceDocs": [
       "docs/suji-tutor-dialogue-flow-prime-factorization.md",
       "docs/suji-error-patterns-prime-factorization.md"

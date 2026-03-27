@@ -11,19 +11,44 @@ def build_observation_form_template(session_state: dict, observation_form_mappin
     if mapping is None:
         raise ValueError(f"No observation form mapping found for lesson step {lesson_step_id}.")
 
+    learner_response_prompt = mapping.get("learnerResponsePrompt")
+    tutor_note_prompt = mapping.get("tutorNotePrompt")
+    fields = mapping.get("fields", [])
+    if not isinstance(learner_response_prompt, str) or not learner_response_prompt.strip():
+        raise ValueError(f"Observation form mapping for {lesson_step_id} is missing learnerResponsePrompt.")
+    if not isinstance(tutor_note_prompt, str) or not tutor_note_prompt.strip():
+        raise ValueError(f"Observation form mapping for {lesson_step_id} is missing tutorNotePrompt.")
+    if not isinstance(fields, list) or not fields:
+        raise ValueError(f"Observation form mapping for {lesson_step_id} must contain at least one field.")
+
+    normalized_fields = []
+    for field in fields:
+        field_id = field.get("fieldId")
+        label = field.get("label")
+        prompt = field.get("prompt")
+        true_means = field.get("trueMeans")
+        if not isinstance(field_id, str) or not field_id.strip():
+            raise ValueError(f"Observation form mapping for {lesson_step_id} contains a field without fieldId.")
+        if not isinstance(label, str) or not label.strip():
+            raise ValueError(f"Observation form mapping for {lesson_step_id}:{field_id} is missing label.")
+        if not isinstance(prompt, str) or not prompt.strip():
+            raise ValueError(f"Observation form mapping for {lesson_step_id}:{field_id} is missing prompt.")
+        if not isinstance(true_means, str) or not true_means.strip():
+            raise ValueError(f"Observation form mapping for {lesson_step_id}:{field_id} is missing trueMeans.")
+        normalized_fields.append(
+            {
+                "fieldId": field_id,
+                "label": label,
+                "prompt": prompt,
+                "trueMeans": true_means,
+            }
+        )
+
     return {
         "lessonStepId": lesson_step_id,
-        "learnerResponsePrompt": mapping.get("learnerResponsePrompt", "Record the learner response in plain language."),
-        "tutorNotePrompt": mapping.get("tutorNotePrompt", "Record a short tutor note if needed."),
-        "fields": [
-            {
-                "fieldId": field.get("fieldId"),
-                "label": field.get("label", field.get("fieldId")),
-                "prompt": field.get("prompt"),
-                "trueMeans": field.get("trueMeans"),
-            }
-            for field in mapping.get("fields", [])
-        ],
+        "learnerResponsePrompt": learner_response_prompt,
+        "tutorNotePrompt": tutor_note_prompt,
+        "fields": normalized_fields,
     }
 
 

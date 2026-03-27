@@ -119,14 +119,15 @@
     "status": "draft-from-docs",
     "openingLine": "Before calculating, let's decide what kind of structure this question is asking for.",
     "firstTutorQuestion": "Are you looking for what overlaps or what covers both numbers?",
-    "smallHint": "Common divisor looks for shared structure, while common multiple must cover both numbers.",
-    "goodStoppingPoint": "Learner says which structure to look for before trying the calculation.",
+    "smallHint": "Say the task type first: shared structure for common divisor, covering structure for common multiple.",
+    "goodStoppingPoint": "Learner names the task type first and delays calculation until that structure is clear.",
     "watchFor": [
       "Learner starts calculation before deciding whether the task is about overlap or coverage.",
-      "Learner uses the same rule for both common divisor and common multiple."
+      "Learner uses the same rule for both common divisor and common multiple.",
+      "Learner says 'common' but cannot explain whether they need shared factors or enough factors for both numbers."
     ],
-    "exampleTutorMove": "Say 'overlap or cover' before touching the numbers.",
-    "exampleLearnerResponse": "If it asks for a common divisor, I need the overlapping factors. If it asks for a common multiple, I need enough factors to cover both numbers.",
+    "exampleTutorMove": "Stop the arithmetic and ask, 'Before we compute, is this the overlap answer or the cover-both answer?'",
+    "exampleLearnerResponse": "A common divisor uses only the overlap, but a common multiple needs enough prime factors to cover both numbers.",
     "sourceDocs": [
       "docs/suji-tutor-dialogue-flow-prime-factorization.md",
       "docs/suji-error-patterns-prime-factorization.md"
@@ -138,14 +139,15 @@
     "status": "draft-from-docs",
     "openingLine": "Let's name which part of the factorization matters before solving the transfer question.",
     "firstTutorQuestion": "Which part of the factorization helps you answer this question first?",
-    "smallHint": "Do not use the whole factorization blindly; point to the part that matters here.",
-    "goodStoppingPoint": "Learner identifies the relevant part of the factorization before using it.",
+    "smallHint": "Do not use the whole factorization blindly; point to the part that matters here and say why it matters.",
+    "goodStoppingPoint": "Learner identifies the relevant part of the factorization before using it and explains why that part answers the transfer question.",
     "watchFor": [
       "Learner reads the full factorization out loud without selecting the useful part.",
-      "Learner computes first and explains relevance only afterward."
+      "Learner computes first and explains relevance only afterward.",
+      "Learner points to a factor or exponent but cannot explain why it matters for this question."
     ],
-    "exampleTutorMove": "Underline the part you need before you solve anything else.",
-    "exampleLearnerResponse": "For this question, the exponent of 2 matters first, so I should look at that part of the factorization.",
+    "exampleTutorMove": "Ask the learner to underline one part and finish the sentence, 'This part matters because...'",
+    "exampleLearnerResponse": "The exponent of 2 matters here because this question depends on how many 2s are in the factorization, not on every prime equally.",
     "sourceDocs": [
       "docs/suji-tutor-dialogue-flow-prime-factorization.md",
       "docs/suji-error-patterns-prime-factorization.md"

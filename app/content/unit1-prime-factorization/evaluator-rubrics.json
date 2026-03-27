@@ -96,11 +96,12 @@
     "lessonStepId": "STEP-U1-S5C-GCD-LCM-SORT",
     "status": "draft-from-docs",
     "requiredSignals": [
-      "names_shared_vs_covering_structure"
+      "names_shared_vs_covering_structure",
+      "delays_calculation_until_structure_named"
     ],
     "optionalTextHints": [
       "overlap",
-      "cover"
+      "cover both"
     ],
     "sourceDocs": [
       "docs/suji-tutor-dialogue-flow-prime-factorization.md"
@@ -110,11 +111,12 @@
     "lessonStepId": "STEP-U1-S5D-RELEVANT-PART-EXPLAIN",
     "status": "draft-from-docs",
     "requiredSignals": [
-      "points_to_relevant_part_before_solving"
+      "points_to_relevant_part_before_solving",
+      "explains_why_part_is_relevant"
     ],
     "optionalTextHints": [
-      "this part",
-      "first"
+      "this part matters",
+      "because"
     ],
     "sourceDocs": [
       "docs/suji-tutor-dialogue-flow-prime-factorization.md"

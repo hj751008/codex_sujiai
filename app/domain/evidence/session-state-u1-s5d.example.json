@@ -1,0 +1,37 @@
+{
+  "learnerId": "sample-learner",
+  "targetSkillId": "U1-S5D",
+  "status": "in_progress",
+  "currentStepIndex": 0,
+  "currentStep": {
+    "activityId": "ACT-U1-S5D-RELEVANT-PART-EXPLAIN",
+    "lessonStepId": "STEP-U1-S5D-RELEVANT-PART-EXPLAIN",
+    "skillId": "U1-S5D",
+    "activityType": "dialogue-flow",
+    "title": "Explain Which Part of the Factorization Matters",
+    "openingLine": "Let's name which part of the factorization matters before solving the transfer question.",
+    "firstTutorQuestion": "Which part of the factorization helps you answer this question first?",
+    "smallHint": "Do not use the whole factorization blindly; point to the part that matters here and say why it matters.",
+    "goodStoppingPoint": "Learner identifies the relevant part of the factorization before using it and explains why that part answers the transfer question."
+  },
+  "nextStep": null,
+  "completedStepIds": [],
+  "remainingStepIds": [
+    "STEP-U1-S5D-RELEVANT-PART-EXPLAIN"
+  ],
+  "steps": [
+    {
+      "activityId": "ACT-U1-S5D-RELEVANT-PART-EXPLAIN",
+      "lessonStepId": "STEP-U1-S5D-RELEVANT-PART-EXPLAIN",
+      "skillId": "U1-S5D",
+      "activityType": "dialogue-flow",
+      "title": "Explain Which Part of the Factorization Matters",
+      "openingLine": "Let's name which part of the factorization matters before solving the transfer question.",
+      "firstTutorQuestion": "Which part of the factorization helps you answer this question first?",
+      "smallHint": "Do not use the whole factorization blindly; point to the part that matters here and say why it matters.",
+      "goodStoppingPoint": "Learner identifies the relevant part of the factorization before using it and explains why that part answers the transfer question."
+    }
+  ],
+  "completionRule": "complete_all_steps_in_order",
+  "history": []
+}

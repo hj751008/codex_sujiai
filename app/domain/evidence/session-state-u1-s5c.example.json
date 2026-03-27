@@ -1,0 +1,37 @@
+{
+  "learnerId": "sample-learner",
+  "targetSkillId": "U1-S5C",
+  "status": "in_progress",
+  "currentStepIndex": 0,
+  "currentStep": {
+    "activityId": "ACT-U1-S5C-GCD-LCM-SORT",
+    "lessonStepId": "STEP-U1-S5C-GCD-LCM-SORT",
+    "skillId": "U1-S5C",
+    "activityType": "dialogue-flow",
+    "title": "Sort Common Divisor vs Common Multiple",
+    "openingLine": "Before calculating, let's decide what kind of structure this question is asking for.",
+    "firstTutorQuestion": "Are you looking for what overlaps or what covers both numbers?",
+    "smallHint": "Say the task type first: shared structure for common divisor, covering structure for common multiple.",
+    "goodStoppingPoint": "Learner names the task type first and delays calculation until that structure is clear."
+  },
+  "nextStep": null,
+  "completedStepIds": [],
+  "remainingStepIds": [
+    "STEP-U1-S5C-GCD-LCM-SORT"
+  ],
+  "steps": [
+    {
+      "activityId": "ACT-U1-S5C-GCD-LCM-SORT",
+      "lessonStepId": "STEP-U1-S5C-GCD-LCM-SORT",
+      "skillId": "U1-S5C",
+      "activityType": "dialogue-flow",
+      "title": "Sort Common Divisor vs Common Multiple",
+      "openingLine": "Before calculating, let's decide what kind of structure this question is asking for.",
+      "firstTutorQuestion": "Are you looking for what overlaps or what covers both numbers?",
+      "smallHint": "Say the task type first: shared structure for common divisor, covering structure for common multiple.",
+      "goodStoppingPoint": "Learner names the task type first and delays calculation until that structure is clear."
+    }
+  ],
+  "completionRule": "complete_all_steps_in_order",
+  "history": []
+}

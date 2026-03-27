@@ -76,9 +76,10 @@
     "summary": "Learner mixes common-divisor and common-multiple reasoning when comparing two factorizations.",
     "watchFor": [
       "Learner uses overlap language and cover language interchangeably.",
-      "Learner starts multiplying without classifying the task first."
+      "Learner starts multiplying without classifying the task first.",
+      "Learner can repeat the words GCD or LCM but cannot connect them to shared-versus-covering structure."
     ],
-    "operatorNote": "Pause calculation and make the learner say whether the task asks for overlap or coverage.",
+    "operatorNote": "Pause calculation and make the learner say whether the task asks for overlap or coverage before any arithmetic begins.",
     "sourceDocs": [
       "docs/suji-error-patterns-prime-factorization.md"
     ]
@@ -90,9 +91,10 @@
     "summary": "Learner cannot explain which part of the factorization matters for the new question.",
     "watchFor": [
       "Learner recites the whole factorization without selecting a useful part.",
-      "Learner solves procedurally and cannot justify why that part was used."
+      "Learner solves procedurally and cannot justify why that part was used.",
+      "Learner points to a factor or exponent but cannot say how it helps answer the new question."
     ],
-    "operatorNote": "Require the learner to point to the relevant factor or exponent before computing.",
+    "operatorNote": "Require the learner to point to the relevant factor or exponent before computing and explain why that part matters.",
     "sourceDocs": [
       "docs/suji-error-patterns-prime-factorization.md"
     ]

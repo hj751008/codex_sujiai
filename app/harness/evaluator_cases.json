@@ -64,5 +64,51 @@
         "STEP-U1-S3-REWRITE-CLEANLY"
       ]
     }
+  },
+  {
+    "name": "s5c-needs-structure-and-delay-signals",
+    "sessionFile": "app/domain/evidence/session-state-u1-s5c.example.json",
+    "observationFormInput": {
+      "learnerResponse": "This is a common multiple question, so I need enough prime factors to cover both numbers before I calculate anything.",
+      "fieldValues": {
+        "names_shared_vs_covering_structure": true,
+        "delays_calculation_until_structure_named": true
+      }
+    },
+    "expectedEvaluation": {
+      "lessonStepId": "STEP-U1-S5C-GCD-LCM-SORT",
+      "decision": "completed",
+      "canAutoAdvance": true
+    },
+    "expectedAppliedState": {
+      "status": "completed",
+      "currentLessonStepId": null,
+      "completedStepIds": [
+        "STEP-U1-S5C-GCD-LCM-SORT"
+      ]
+    }
+  },
+  {
+    "name": "s5d-needs-part-and-reason-signals",
+    "sessionFile": "app/domain/evidence/session-state-u1-s5d.example.json",
+    "observationFormInput": {
+      "learnerResponse": "The exponent of 2 matters first because this question depends on how many 2s are in the factorization.",
+      "fieldValues": {
+        "points_to_relevant_part": true,
+        "explains_why_that_part_matters": true
+      }
+    },
+    "expectedEvaluation": {
+      "lessonStepId": "STEP-U1-S5D-RELEVANT-PART-EXPLAIN",
+      "decision": "completed",
+      "canAutoAdvance": true
+    },
+    "expectedAppliedState": {
+      "status": "completed",
+      "currentLessonStepId": null,
+      "completedStepIds": [
+        "STEP-U1-S5D-RELEVANT-PART-EXPLAIN"
+      ]
+    }
   }
 ]

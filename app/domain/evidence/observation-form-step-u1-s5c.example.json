@@ -1,0 +1,9 @@
+{
+  "learnerResponse": "This is a common multiple question, so I need enough prime factors to cover both numbers before I calculate anything.",
+  "fieldValues": {
+    "names_shared_vs_covering_structure": true,
+    "delays_calculation_until_structure_named": true
+  },
+  "tutorNote": "Learner named the cover-both structure before starting arithmetic.",
+  "timestamp": "2026-03-27T10:20:00+09:00"
+}
