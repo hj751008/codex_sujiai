@@ -1,0 +1,12 @@
+[
+  {
+    "fromSkillId": "U?-S?",
+    "toSkillId": "U?-S?",
+    "relationship": "REQUIRED",
+    "approvalStatus": "provisional",
+    "note": "Replace with a doc-backed prerequisite note.",
+    "sourceDocs": [
+      "docs/replace-with-source.md"
+    ]
+  }
+]

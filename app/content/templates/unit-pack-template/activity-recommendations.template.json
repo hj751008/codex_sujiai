@@ -1,0 +1,20 @@
+[
+  {
+    "activityId": "ACT-U?-S?-PLACEHOLDER",
+    "skillId": "U?-S?",
+    "status": "draft-from-docs",
+    "activityType": "dialogue-flow",
+    "title": "Replace with activity title",
+    "goal": "Replace with a doc-backed learning goal.",
+    "firstTutorQuestion": "Replace with the first tutor question.",
+    "operatorFocus": "Replace with what the tutor should pay attention to.",
+    "watchFor": [
+      "Replace with a documented learner difficulty."
+    ],
+    "exampleTutorMove": "Replace with a tutor move grounded in the source docs.",
+    "successSignal": "Replace with what counts as enough progress for this activity.",
+    "sourceDocs": [
+      "docs/replace-with-source.md"
+    ]
+  }
+]

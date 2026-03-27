@@ -1,0 +1,14 @@
+[
+  {
+    "id": "replace-example-id",
+    "targetSkillId": "U?-S?",
+    "status": "draft-from-docs",
+    "trigger": "Replace with a doc-backed learner situation.",
+    "recommendationReason": "Replace with a doc-backed reason for recommending the skill.",
+    "confidence": "limited",
+    "needsReview": true,
+    "sourceDocs": [
+      "docs/replace-with-source.md"
+    ]
+  }
+]

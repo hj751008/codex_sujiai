@@ -17,6 +17,7 @@ structure is schema-first and explanation-first rather than scoring-first.
 
 - `domain/`: shared data models and reviewable rule shapes
 - `content/`: unit-specific skills, links, and recommendation examples
+- `content/templates/`: copy-safe scaffolds for future unit packs
 - `validation/`: lightweight checks and guardrails for doc-backed logic
 
 ## Current Scope

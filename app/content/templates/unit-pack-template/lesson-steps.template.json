@@ -1,0 +1,19 @@
+[
+  {
+    "lessonStepId": "STEP-U?-S?-PLACEHOLDER",
+    "activityId": "ACT-U?-S?-PLACEHOLDER",
+    "status": "draft-from-docs",
+    "openingLine": "Replace with a doc-backed opening line.",
+    "firstTutorQuestion": "Replace with the first tutor question.",
+    "smallHint": "Replace with the next small hint.",
+    "goodStoppingPoint": "Replace with the stopping point for the step.",
+    "watchFor": [
+      "Replace with a documented learner move to watch for."
+    ],
+    "exampleTutorMove": "Replace with a grounded tutor move.",
+    "exampleLearnerResponse": "Replace with a grounded learner response example.",
+    "sourceDocs": [
+      "docs/replace-with-source.md"
+    ]
+  }
+]

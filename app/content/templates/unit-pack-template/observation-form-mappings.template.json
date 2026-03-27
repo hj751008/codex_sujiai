@@ -1,0 +1,20 @@
+[
+  {
+    "lessonStepId": "STEP-U?-S?-PLACEHOLDER",
+    "status": "draft-from-docs",
+    "learnerResponsePrompt": "Replace with the exact learner-response prompt for this step.",
+    "tutorNotePrompt": "Replace with the exact tutor-note prompt for this step.",
+    "fields": [
+      {
+        "fieldId": "replace_field_id",
+        "signalOnTrue": "replace_required_signal",
+        "label": "Replace with a short label",
+        "prompt": "Replace with the operator-facing question for this field.",
+        "trueMeans": "Replace with what a checked field means."
+      }
+    ],
+    "sourceDocs": [
+      "docs/replace-with-source.md"
+    ]
+  }
+]

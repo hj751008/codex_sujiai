@@ -1,0 +1,12 @@
+[
+  {
+    "skillId": "U?-S?",
+    "unitId": "U?",
+    "status": "draft-from-docs",
+    "title": "Replace with documented skill title",
+    "summary": "Replace with a doc-backed skill summary.",
+    "sourceDocs": [
+      "docs/replace-with-source.md"
+    ]
+  }
+]

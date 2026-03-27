@@ -1,0 +1,15 @@
+[
+  {
+    "id": "replace-error-pattern-id",
+    "skillId": "U?-S?",
+    "status": "draft-from-docs",
+    "summary": "Replace with a doc-backed learner error summary.",
+    "watchFor": [
+      "Replace with a documented watch-for signal."
+    ],
+    "operatorNote": "Replace with a conservative tutor response note.",
+    "sourceDocs": [
+      "docs/replace-with-source.md"
+    ]
+  }
+]
