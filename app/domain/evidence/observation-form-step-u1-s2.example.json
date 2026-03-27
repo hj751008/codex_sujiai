@@ -1,0 +1,12 @@
+{
+  "learnerResponse": "24 is even, so I should start by dividing by 2 first.",
+  "fieldValues": {
+    "starts_with_two": true,
+    "mentions_evenness": true
+  },
+  "tutorNote": "Learner chose 2 as the first easy divisor for 24.",
+  "timestamp": "2026-03-27T09:30:00+09:00",
+  "notes": [
+    "Use this form when the current active session step is STEP-U1-S2-ENTRY-BRIDGE."
+  ]
+}

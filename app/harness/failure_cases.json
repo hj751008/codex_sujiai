@@ -1,0 +1,62 @@
+[
+  {
+    "name": "submit observation fails when learner record has no active session",
+    "kind": "submit_observation_to_learner_record",
+    "learnerFile": "app/domain/evidence/learner-record-with-summary.example.json",
+    "observationFormInput": {
+      "learnerResponse": "I think I can start with 2.",
+      "fieldValues": {
+        "starts_with_easy_divisor": true
+      },
+      "tutorNote": "No active session was present.",
+      "timestamp": "2026-03-27T09:35:00+09:00"
+    },
+    "expectedErrorContains": "no activeSession"
+  },
+  {
+    "name": "submit observation fails when active session learner does not match record learner",
+    "kind": "submit_observation_to_learner_record_inline",
+    "learnerRecord": {
+      "learnerId": "learner-a",
+      "activeSession": {
+        "learnerId": "learner-b",
+        "targetSkillId": "U1-S3",
+        "status": "in_progress",
+        "currentStepIndex": 0,
+        "currentStep": {
+          "activityId": "ACT-U1-S2-ENTRY-BRIDGE",
+          "lessonStepId": "STEP-U1-S2-ENTRY-BRIDGE",
+          "skillId": "U1-S2"
+        },
+        "nextStep": null,
+        "completedStepIds": [],
+        "remainingStepIds": [
+          "STEP-U1-S2-ENTRY-BRIDGE"
+        ],
+        "steps": [
+          {
+            "activityId": "ACT-U1-S2-ENTRY-BRIDGE",
+            "lessonStepId": "STEP-U1-S2-ENTRY-BRIDGE",
+            "skillId": "U1-S2"
+          }
+        ],
+        "completionRule": "complete_all_steps_in_order",
+        "history": []
+      },
+      "sessions": [],
+      "evidenceEvents": [],
+      "latestSkillSummaries": [],
+      "latestRecommendations": [],
+      "updatedAt": null
+    },
+    "observationFormInput": {
+      "learnerResponse": "I can start with 2.",
+      "fieldValues": {
+        "starts_with_easy_divisor": true
+      },
+      "tutorNote": "Mismatched learner ids.",
+      "timestamp": "2026-03-27T09:40:00+09:00"
+    },
+    "expectedErrorContains": "same learnerId"
+  }
+]

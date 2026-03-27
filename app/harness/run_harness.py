@@ -5,7 +5,11 @@ from pathlib import Path
 
 from app.runtime.content_loader import load_unit1_content
 from app.runtime.diagnostics import diagnose_event, summarize_learner, validate_evidence_event
-from app.runtime.learner_record import merge_session_into_learner_record, store_active_session
+from app.runtime.learner_record import (
+    merge_session_into_learner_record,
+    store_active_session,
+    submit_observation_to_learner_record,
+)
 from app.runtime.session_orchestrator import resume_or_plan_session
 from app.runtime.session_planner import plan_next_session
 from app.runtime.session_runner import (
@@ -69,6 +73,16 @@ def _load_session_orchestrator_cases() -> list[dict]:
 
 def _load_active_session_cases() -> list[dict]:
     with (HARNESS_ROOT / "active_session_cases.json").open("r", encoding="utf-8") as handle:
+        return json.load(handle)
+
+
+def _load_learner_record_submission_cases() -> list[dict]:
+    with (HARNESS_ROOT / "learner_record_submission_cases.json").open("r", encoding="utf-8") as handle:
+        return json.load(handle)
+
+
+def _load_failure_cases() -> list[dict]:
+    with (HARNESS_ROOT / "failure_cases.json").open("r", encoding="utf-8") as handle:
         return json.load(handle)
 
 
@@ -508,6 +522,67 @@ def _assert_active_session_case(case: dict) -> list[str]:
     return failures
 
 
+def _assert_learner_record_submission_case(case: dict, content) -> list[str]:
+    failures: list[str] = []
+    learner_path = Path(HARNESS_ROOT.parent.parent, case["learnerFile"])
+    with learner_path.open("r", encoding="utf-8") as handle:
+        learner_record = json.load(handle)
+
+    updated_record = submit_observation_to_learner_record(learner_record, case["observationFormInput"], content)
+    expected = case["expected"]
+    active_session = updated_record.get("activeSession") or {}
+    active_current = (active_session.get("currentStep") or {}).get("lessonStepId")
+
+    if active_session.get("targetSkillId") != expected["activeTargetSkillId"]:
+        failures.append(
+            f"{case['name']}: expected active target skill {expected['activeTargetSkillId']}, got {active_session.get('targetSkillId')}."
+        )
+    if active_current != expected["activeCurrentLessonStepId"]:
+        failures.append(
+            f"{case['name']}: expected active current step {expected['activeCurrentLessonStepId']}, got {active_current}."
+        )
+    if active_session.get("completedStepIds") != expected["activeCompletedStepIds"]:
+        failures.append(
+            f"{case['name']}: expected active completed ids {expected['activeCompletedStepIds']}, got {active_session.get('completedStepIds')}."
+        )
+
+    actual_recommendation_skill_ids = [record["targetSkillId"] for record in updated_record.get("latestRecommendations", [])]
+    if actual_recommendation_skill_ids != expected["latestRecommendationSkillIds"]:
+        failures.append(
+            f"{case['name']}: expected latest recommendation ids {expected['latestRecommendationSkillIds']}, got {actual_recommendation_skill_ids}."
+        )
+    if len(updated_record.get("evidenceEvents", [])) != expected["evidenceEventCount"]:
+        failures.append(
+            f"{case['name']}: expected evidence event count {expected['evidenceEventCount']}, got {len(updated_record.get('evidenceEvents', []))}."
+        )
+
+    return failures
+
+
+def _assert_failure_case(case: dict, content) -> list[str]:
+    learner_record = None
+    if "learnerFile" in case:
+        learner_path = Path(HARNESS_ROOT.parent.parent, case["learnerFile"])
+        with learner_path.open("r", encoding="utf-8") as handle:
+            learner_record = json.load(handle)
+    else:
+        learner_record = case["learnerRecord"]
+
+    try:
+        if case["kind"].startswith("submit_observation_to_learner_record"):
+            submit_observation_to_learner_record(learner_record, case["observationFormInput"], content)
+        else:
+            return [f"{case['name']}: unsupported failure case kind {case['kind']}."]
+    except ValueError as exc:
+        if case["expectedErrorContains"] not in str(exc):
+            return [
+                f"{case['name']}: expected error containing {case['expectedErrorContains']!r}, got {str(exc)!r}."
+            ]
+        return []
+
+    return [f"{case['name']}: expected ValueError but the call succeeded."]
+
+
 def main() -> int:
     content = load_unit1_content()
     cases = _load_cases()
@@ -520,6 +595,8 @@ def main() -> int:
     session_planner_cases = _load_session_planner_cases()
     session_orchestrator_cases = _load_session_orchestrator_cases()
     active_session_cases = _load_active_session_cases()
+    learner_record_submission_cases = _load_learner_record_submission_cases()
+    failure_cases = _load_failure_cases()
 
     failures: list[str] = []
     for case in cases:
@@ -542,6 +619,10 @@ def main() -> int:
         failures.extend(_assert_session_orchestrator_case(case))
     for case in active_session_cases:
         failures.extend(_assert_active_session_case(case))
+    for case in learner_record_submission_cases:
+        failures.extend(_assert_learner_record_submission_case(case, content))
+    for case in failure_cases:
+        failures.extend(_assert_failure_case(case, content))
 
     if failures:
         print("Harness failed:")
@@ -560,6 +641,8 @@ def main() -> int:
     print(f"Session-planner cases: {len(session_planner_cases)}")
     print(f"Session-orchestrator cases: {len(session_orchestrator_cases)}")
     print(f"Active-session cases: {len(active_session_cases)}")
+    print(f"Learner-record submission cases: {len(learner_record_submission_cases)}")
+    print(f"Failure cases: {len(failure_cases)}")
     return 0
 
 

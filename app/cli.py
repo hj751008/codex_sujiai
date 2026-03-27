@@ -10,7 +10,11 @@ if __package__ in {None, ""}:
 
 from app.runtime.content_loader import load_unit1_content
 from app.runtime.diagnostics import diagnose_event, summarize_learner, validate_evidence_event
-from app.runtime.learner_record import merge_session_into_learner_record, store_active_session
+from app.runtime.learner_record import (
+    merge_session_into_learner_record,
+    store_active_session,
+    submit_observation_to_learner_record,
+)
 from app.runtime.session_orchestrator import resume_or_plan_session
 from app.runtime.session_planner import plan_next_session
 from app.runtime.session_runner import (
@@ -68,6 +72,14 @@ def _build_parser() -> argparse.ArgumentParser:
     submit_observation_parser = subparsers.add_parser("submit-observation", help="Append an observation record, evaluate it, and update session state.")
     submit_observation_parser.add_argument("--session", required=True, help="Path to a session state JSON file.")
     submit_observation_parser.add_argument("--input", required=True, help="Path to an observation form JSON file.")
+
+    submit_observation_record_parser = subparsers.add_parser(
+        "submit-observation-to-learner-record",
+        help="Submit an observation against learner_record.activeSession and refresh learner-level state.",
+    )
+    submit_observation_record_parser.add_argument("--learner", required=True, help="Path to a learner record JSON file.")
+    submit_observation_record_parser.add_argument("--input", required=True, help="Path to an observation form JSON file.")
+    submit_observation_record_parser.add_argument("--write", action="store_true", help="Write the updated learner record back to the learner file.")
 
     session_summary_parser = subparsers.add_parser("summarize-session-history", help="Convert session history to learner evidence and summarize it.")
     session_summary_parser.add_argument("--session", required=True, help="Path to a session state JSON file.")
@@ -196,6 +208,23 @@ def run_submit_observation(session_path: Path, input_path: Path) -> int:
     return 0
 
 
+def run_submit_observation_to_learner_record(learner_path: Path, input_path: Path, write_result: bool) -> int:
+    learner_record = _load_json(learner_path)
+    observation_form = _load_json(input_path)
+    content = load_unit1_content()
+    try:
+        updated_record = submit_observation_to_learner_record(learner_record, observation_form, content)
+    except ValueError as exc:
+        print(f"Learner-record observation submission failed: {exc}")
+        return 1
+
+    if write_result:
+        _dump_json(learner_path, updated_record)
+
+    print(json.dumps(updated_record, ensure_ascii=False, indent=2))
+    return 0
+
+
 def run_summarize_session_history(session_path: Path) -> int:
     session_state = _load_json(session_path)
     content = load_unit1_content()
@@ -315,6 +344,8 @@ def main() -> int:
         return run_evaluate_form(Path(args.session), Path(args.input), args.apply)
     if args.command == "submit-observation":
         return run_submit_observation(Path(args.session), Path(args.input))
+    if args.command == "submit-observation-to-learner-record":
+        return run_submit_observation_to_learner_record(Path(args.learner), Path(args.input), args.write)
     if args.command == "summarize-session-history":
         return run_summarize_session_history(Path(args.session))
     if args.command == "update-learner-record":
