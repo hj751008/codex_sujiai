@@ -1,0 +1,26 @@
+[
+  {
+    "name": "start learning session by resuming live work",
+    "learnerFile": "app/domain/evidence/learner-record-with-active-session.example.json",
+    "expected": {
+      "action": "resume_session",
+      "targetSkillId": "U1-S4",
+      "currentLessonStepId": "STEP-U1-S4-VERIFY-PRIME-FIRST",
+      "firstTutorQuestion": "Before checking the product, are all the factors prime?",
+      "nextLessonStepId": null,
+      "remainingStepCount": 1
+    }
+  },
+  {
+    "name": "start learning session by planning and opening first step",
+    "learnerFile": "app/domain/evidence/learner-record-with-summary.example.json",
+    "expected": {
+      "action": "plan_new_session",
+      "targetSkillId": "U1-S3",
+      "currentLessonStepId": "STEP-U1-S2-ENTRY-BRIDGE",
+      "firstTutorQuestion": "What is the easiest divisor you can test first?",
+      "nextLessonStepId": "STEP-U1-S3-REWRITE-CLEANLY",
+      "remainingStepCount": 2
+    }
+  }
+]

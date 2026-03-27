@@ -16,7 +16,7 @@ from app.runtime.learner_record import (
     submit_observation_to_learner_record,
     validate_learner_record,
 )
-from app.runtime.session_orchestrator import resume_or_plan_session
+from app.runtime.session_orchestrator import resume_or_plan_session, start_learning_session
 from app.runtime.session_planner import plan_next_session
 from app.runtime.session_runner import (
     advance_session_state,
@@ -107,6 +107,13 @@ def _build_parser() -> argparse.ArgumentParser:
     )
     sync_active_session_parser.add_argument("--learner", required=True, help="Path to a learner record JSON file.")
     sync_active_session_parser.add_argument("--write", action="store_true", help="Write the updated learner record back to the learner file.")
+
+    start_learning_session_parser = subparsers.add_parser(
+        "start-learning-session",
+        help="Resume or plan a live session, store it as activeSession, and return the first-step guide.",
+    )
+    start_learning_session_parser.add_argument("--learner", required=True, help="Path to a learner record JSON file.")
+    start_learning_session_parser.add_argument("--write", action="store_true", help="Write the updated learner record back to the learner file.")
 
     subparsers.add_parser("run-harness", help="Run the first Unit 1 harness.")
     return parser
@@ -318,6 +325,21 @@ def run_sync_active_session(learner_path: Path, write_result: bool) -> int:
     return 0
 
 
+def run_start_learning_session(learner_path: Path, write_result: bool) -> int:
+    learner_record = _load_json(learner_path)
+    try:
+        result = start_learning_session(learner_record)
+    except ValueError as exc:
+        print(f"Start-learning-session failed: {exc}")
+        return 1
+
+    if write_result:
+        _dump_json(learner_path, result["learnerRecord"])
+
+    print(json.dumps(result, ensure_ascii=False, indent=2))
+    return 0
+
+
 def run_summarize_learner(input_path: Path) -> int:
     events = _load_json(input_path)
     if not isinstance(events, list):
@@ -374,6 +396,8 @@ def main() -> int:
         return run_resume_or_plan(Path(args.learner))
     if args.command == "sync-active-session":
         return run_sync_active_session(Path(args.learner), args.write)
+    if args.command == "start-learning-session":
+        return run_start_learning_session(Path(args.learner), args.write)
     if args.command == "run-harness":
         return run_harness()
 

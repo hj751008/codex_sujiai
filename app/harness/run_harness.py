@@ -11,7 +11,7 @@ from app.runtime.learner_record import (
     submit_observation_to_learner_record,
     validate_learner_record,
 )
-from app.runtime.session_orchestrator import resume_or_plan_session
+from app.runtime.session_orchestrator import resume_or_plan_session, start_learning_session
 from app.runtime.session_planner import plan_next_session
 from app.runtime.session_runner import (
     advance_session_state,
@@ -84,6 +84,11 @@ def _load_learner_record_submission_cases() -> list[dict]:
 
 def _load_failure_cases() -> list[dict]:
     with (HARNESS_ROOT / "failure_cases.json").open("r", encoding="utf-8") as handle:
+        return json.load(handle)
+
+
+def _load_start_learning_session_cases() -> list[dict]:
+    with (HARNESS_ROOT / "start_learning_session_cases.json").open("r", encoding="utf-8") as handle:
         return json.load(handle)
 
 
@@ -594,6 +599,47 @@ def _assert_failure_case(case: dict, content) -> list[str]:
     return [f"{case['name']}: expected ValueError but the call succeeded."]
 
 
+def _assert_start_learning_session_case(case: dict) -> list[str]:
+    failures: list[str] = []
+    learner_path = Path(HARNESS_ROOT.parent.parent, case["learnerFile"])
+    with learner_path.open("r", encoding="utf-8") as handle:
+        learner_record = json.load(handle)
+
+    result = start_learning_session(learner_record)
+    expected = case["expected"]
+    guide = result.get("sessionStartGuide", {})
+    active_session = result.get("activeSession", {})
+
+    if result.get("action") != expected["action"]:
+        failures.append(f"{case['name']}: expected action {expected['action']}, got {result.get('action')}.")
+    if guide.get("targetSkillId") != expected["targetSkillId"]:
+        failures.append(
+            f"{case['name']}: expected target skill {expected['targetSkillId']}, got {guide.get('targetSkillId')}."
+        )
+    if guide.get("currentLessonStepId") != expected["currentLessonStepId"]:
+        failures.append(
+            f"{case['name']}: expected current step {expected['currentLessonStepId']}, got {guide.get('currentLessonStepId')}."
+        )
+    if guide.get("firstTutorQuestion") != expected["firstTutorQuestion"]:
+        failures.append(
+            f"{case['name']}: expected first tutor question {expected['firstTutorQuestion']!r}, got {guide.get('firstTutorQuestion')!r}."
+        )
+    if guide.get("nextLessonStepId") != expected["nextLessonStepId"]:
+        failures.append(
+            f"{case['name']}: expected next lesson step {expected['nextLessonStepId']}, got {guide.get('nextLessonStepId')}."
+        )
+    if guide.get("remainingStepCount") != expected["remainingStepCount"]:
+        failures.append(
+            f"{case['name']}: expected remaining step count {expected['remainingStepCount']}, got {guide.get('remainingStepCount')}."
+        )
+    if active_session.get("targetSkillId") != expected["targetSkillId"]:
+        failures.append(
+            f"{case['name']}: expected active target skill {expected['targetSkillId']}, got {active_session.get('targetSkillId')}."
+        )
+
+    return failures
+
+
 def main() -> int:
     content = load_unit1_content()
     cases = _load_cases()
@@ -608,6 +654,7 @@ def main() -> int:
     active_session_cases = _load_active_session_cases()
     learner_record_submission_cases = _load_learner_record_submission_cases()
     failure_cases = _load_failure_cases()
+    start_learning_session_cases = _load_start_learning_session_cases()
 
     failures: list[str] = []
     for case in cases:
@@ -634,6 +681,8 @@ def main() -> int:
         failures.extend(_assert_learner_record_submission_case(case, content))
     for case in failure_cases:
         failures.extend(_assert_failure_case(case, content))
+    for case in start_learning_session_cases:
+        failures.extend(_assert_start_learning_session_case(case))
 
     if failures:
         print("Harness failed:")
@@ -654,6 +703,7 @@ def main() -> int:
     print(f"Active-session cases: {len(active_session_cases)}")
     print(f"Learner-record submission cases: {len(learner_record_submission_cases)}")
     print(f"Failure cases: {len(failure_cases)}")
+    print(f"Start-learning-session cases: {len(start_learning_session_cases)}")
     return 0
 
 

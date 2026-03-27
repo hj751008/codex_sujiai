@@ -2,6 +2,7 @@ from __future__ import annotations
 
 from copy import deepcopy
 
+from app.runtime.learner_record import store_active_session
 from app.runtime.session_planner import plan_next_session
 
 
@@ -32,6 +33,36 @@ def resume_or_plan_session(learner_record: dict) -> dict:
         "learnerId": learner_id,
         "action": "plan_new_session",
         "plannedSession": planned_session,
+    }
+
+
+def start_learning_session(learner_record: dict) -> dict:
+    orchestration_result = resume_or_plan_session(learner_record)
+    updated_record = store_active_session(learner_record, orchestration_result)
+    active_session = updated_record.get("activeSession")
+    if not isinstance(active_session, dict):
+        raise ValueError("Start-learning-session could not create or recover an active session.")
+
+    current_step = active_session.get("currentStep") or {}
+    next_step = active_session.get("nextStep") or {}
+
+    return {
+        "learnerId": updated_record.get("learnerId"),
+        "action": orchestration_result.get("action"),
+        "activeSession": active_session,
+        "sessionStartGuide": {
+            "targetSkillId": active_session.get("targetSkillId"),
+            "currentLessonStepId": current_step.get("lessonStepId"),
+            "currentActivityId": current_step.get("activityId"),
+            "title": current_step.get("title"),
+            "openingLine": current_step.get("openingLine"),
+            "firstTutorQuestion": current_step.get("firstTutorQuestion"),
+            "smallHint": current_step.get("smallHint"),
+            "goodStoppingPoint": current_step.get("goodStoppingPoint"),
+            "nextLessonStepId": next_step.get("lessonStepId"),
+            "remainingStepCount": len(active_session.get("remainingStepIds", [])),
+        },
+        "learnerRecord": updated_record,
     }
 
 
