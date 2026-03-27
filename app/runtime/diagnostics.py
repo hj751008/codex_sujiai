@@ -173,7 +173,7 @@ def _recommendation_summary(skill_id: str, matched_patterns: list[dict], example
 
 
 def _serialize_activity(activity: dict) -> dict:
-    return {
+    payload = {
         "activityId": activity["activityId"],
         "skillId": activity["skillId"],
         "activityType": activity["activityType"],
@@ -181,11 +181,15 @@ def _serialize_activity(activity: dict) -> dict:
         "goal": activity["goal"],
         "firstTutorQuestion": activity["firstTutorQuestion"],
     }
+    for optional_key in ("operatorFocus", "watchFor", "exampleTutorMove"):
+        if optional_key in activity:
+            payload[optional_key] = activity[optional_key]
+    return payload
 
 
 def _serialize_session_step(activity: dict, lesson_step_by_activity_id: dict[str, dict]) -> dict:
     lesson_step = lesson_step_by_activity_id.get(activity["activityId"], {})
-    return {
+    payload = {
         "activityId": activity["activityId"],
         "lessonStepId": lesson_step.get("lessonStepId"),
         "skillId": activity["skillId"],
@@ -196,6 +200,10 @@ def _serialize_session_step(activity: dict, lesson_step_by_activity_id: dict[str
         "smallHint": lesson_step.get("smallHint"),
         "goodStoppingPoint": lesson_step.get("goodStoppingPoint"),
     }
+    for optional_key in ("watchFor", "exampleTutorMove", "exampleLearnerResponse"):
+        if optional_key in lesson_step:
+            payload[optional_key] = lesson_step[optional_key]
+    return payload
 
 
 def _ordered_unique_activity_ids(values: list[dict]) -> list[dict]:

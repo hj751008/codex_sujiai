@@ -15,6 +15,7 @@ Build a Korean middle school math learning AI with strong math accuracy, honest 
 
 ## Current App State
 - `app/` now includes a schema-first Unit 1 runtime with content validation, learner summary, prerequisite-aware recommendations, session payload generation, session runner logic, and learner-record persistence
+- The current CLI operator loop reaches `start-learning-session -> run-learning-turn`, so a tutor can open or resume a session, submit an observation, and immediately see the next step or next recommendation
 - The runtime is still intentionally conservative: mastery thresholds, pass labels, and scoring cutoffs remain provisional or undecided unless approved in `docs/`
 - The current runnable flow reaches `learner_record -> activeSession -> observation submission -> learner summary/recommendation refresh`, but curriculum scope is still limited to Unit 1 prime factorization
 

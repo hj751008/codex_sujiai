@@ -7,6 +7,12 @@
     "firstTutorQuestion": "How many divisors does 1 actually have?",
     "smallHint": "A prime number must have exactly two divisors: 1 and itself.",
     "goodStoppingPoint": "Learner says 1 is neither prime nor composite and gives a divisor-based reason.",
+    "watchFor": [
+      "Learner uses the word 'prime' as a memorized label without counting divisors.",
+      "Learner says 1 is prime because it is only divisible by 1."
+    ],
+    "exampleTutorMove": "Let's list the divisors of 1 out loud first, then decide the label.",
+    "exampleLearnerResponse": "1 has only one divisor, so it cannot be prime because prime numbers need exactly two divisors.",
     "sourceDocs": [
       "docs/suji-tutor-dialogue-flow-prime-factorization.md",
       "docs/suji-error-patterns-prime-factorization.md"
@@ -20,6 +26,12 @@
     "firstTutorQuestion": "What is the easiest divisor you can test first?",
     "smallHint": "If the number is even, checking 2 is a calm first step.",
     "goodStoppingPoint": "Learner starts with 2 for 24 and explains that 24 is even.",
+    "watchFor": [
+      "Learner stalls because they think they need the whole tree immediately.",
+      "Learner notices 24 is even but still does not choose 2."
+    ],
+    "exampleTutorMove": "You do not need the whole answer yet. What does the word 'even' let you try first?",
+    "exampleLearnerResponse": "24 is even, so trying 2 first is the easiest entry.",
     "sourceDocs": [
       "docs/suji-worked-bridge-prime-factorization-entry.md",
       "docs/suji-tutor-dialogue-flow-prime-factorization.md"
@@ -33,6 +45,12 @@
     "firstTutorQuestion": "Which factors should still remain in the final line?",
     "smallHint": "Keep only prime factors in the last line, and make sure none were dropped.",
     "goodStoppingPoint": "Learner writes one complete prime factorization with no missing or composite factor.",
+    "watchFor": [
+      "Learner keeps a composite factor like 6 in the final line.",
+      "Learner rewrites with only prime factors but drops one repeated factor."
+    ],
+    "exampleTutorMove": "Cover the scratch work and rebuild the last line only with prime factors that still remain.",
+    "exampleLearnerResponse": "The final line should keep 2, 2, and 3 because all of them are prime and none can be dropped.",
     "sourceDocs": [
       "docs/suji-tutor-dialogue-flow-prime-factorization.md",
       "docs/suji-subskills-prime-factorization.md"
@@ -46,6 +64,12 @@
     "firstTutorQuestion": "Before checking the product, are all the factors prime?",
     "smallHint": "If one factor is composite, the answer is not finished yet.",
     "goodStoppingPoint": "Learner rejects 2 x 6 because 6 is not prime and accepts 2 x 2 x 3.",
+    "watchFor": [
+      "Learner says 2 x 6 is fine because it still equals 12.",
+      "Learner checks only multiplication and skips the word 'prime'."
+    ],
+    "exampleTutorMove": "Do not multiply yet. Which answer still contains a non-prime factor?",
+    "exampleLearnerResponse": "2 x 6 is not finished because 6 is composite, so 2 x 2 x 3 is the true prime factorization.",
     "sourceDocs": [
       "docs/suji-worked-bridge-prime-factorization-verification.md",
       "docs/suji-tutor-dialogue-flow-prime-factorization.md"
@@ -59,6 +83,12 @@
     "firstTutorQuestion": "In this problem, do you need the factorization itself or the number of divisors?",
     "smallHint": "Write the prime factorization first, then use it instead of listing divisors one by one.",
     "goodStoppingPoint": "Learner starts the divisor-count task from the factorization rather than restarting blindly.",
+    "watchFor": [
+      "Learner ignores an already completed factorization and restarts from scratch.",
+      "Learner lists divisors one by one without naming what the task asks for."
+    ],
+    "exampleTutorMove": "Before listing anything, tell me what the factorization already gives you for this question.",
+    "exampleLearnerResponse": "I need the number of divisors, so I should use the factorization instead of listing every divisor.",
     "sourceDocs": [
       "docs/suji-tutor-dialogue-flow-prime-factorization.md",
       "docs/suji-subskills-prime-factorization.md"
@@ -72,6 +102,12 @@
     "firstTutorQuestion": "Which prime factor count is odd right now and needs one more?",
     "smallHint": "Square numbers need each prime factor to appear an even number of times.",
     "goodStoppingPoint": "Learner identifies the missing factor and explains why it completes the square structure.",
+    "watchFor": [
+      "Learner guesses a factor without checking odd and even counts.",
+      "Learner knows the missing factor but cannot explain the even-exponent idea."
+    ],
+    "exampleTutorMove": "Point to the prime whose count is odd and ask what single extra factor would make it even.",
+    "exampleLearnerResponse": "There is one extra 3, so multiplying by 3 makes every prime count even and turns it into a square.",
     "sourceDocs": [
       "docs/suji-tutor-dialogue-flow-prime-factorization.md",
       "docs/suji-error-patterns-prime-factorization.md"
@@ -85,6 +121,12 @@
     "firstTutorQuestion": "Are you looking for what overlaps or what covers both numbers?",
     "smallHint": "Common divisor looks for shared structure, while common multiple must cover both numbers.",
     "goodStoppingPoint": "Learner says which structure to look for before trying the calculation.",
+    "watchFor": [
+      "Learner starts calculation before deciding whether the task is about overlap or coverage.",
+      "Learner uses the same rule for both common divisor and common multiple."
+    ],
+    "exampleTutorMove": "Say 'overlap or cover' before touching the numbers.",
+    "exampleLearnerResponse": "If it asks for a common divisor, I need the overlapping factors. If it asks for a common multiple, I need enough factors to cover both numbers.",
     "sourceDocs": [
       "docs/suji-tutor-dialogue-flow-prime-factorization.md",
       "docs/suji-error-patterns-prime-factorization.md"
@@ -98,6 +140,12 @@
     "firstTutorQuestion": "Which part of the factorization helps you answer this question first?",
     "smallHint": "Do not use the whole factorization blindly; point to the part that matters here.",
     "goodStoppingPoint": "Learner identifies the relevant part of the factorization before using it.",
+    "watchFor": [
+      "Learner reads the full factorization out loud without selecting the useful part.",
+      "Learner computes first and explains relevance only afterward."
+    ],
+    "exampleTutorMove": "Underline the part you need before you solve anything else.",
+    "exampleLearnerResponse": "For this question, the exponent of 2 matters first, so I should look at that part of the factorization.",
     "sourceDocs": [
       "docs/suji-tutor-dialogue-flow-prime-factorization.md",
       "docs/suji-error-patterns-prime-factorization.md"

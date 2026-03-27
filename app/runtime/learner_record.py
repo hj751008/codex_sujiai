@@ -178,6 +178,9 @@ def run_learning_turn(learner_record: dict, observation_form: dict, content) -> 
             "firstTutorQuestion": current_step.get("firstTutorQuestion"),
             "smallHint": current_step.get("smallHint"),
             "goodStoppingPoint": current_step.get("goodStoppingPoint"),
+            "watchFor": current_step.get("watchFor"),
+            "exampleTutorMove": current_step.get("exampleTutorMove"),
+            "exampleLearnerResponse": current_step.get("exampleLearnerResponse"),
             "nextLessonStepId": next_step.get("lessonStepId"),
             "remainingStepCount": len(active_session.get("remainingStepIds", [])),
         }
@@ -191,6 +194,8 @@ def run_learning_turn(learner_record: dict, observation_form: dict, content) -> 
             "targetSkillId": None if not isinstance(next_recommendation, dict) else next_recommendation.get("targetSkillId"),
             "firstLessonStepId": first_step.get("lessonStepId"),
             "firstTutorQuestion": first_step.get("firstTutorQuestion"),
+            "watchFor": first_step.get("watchFor"),
+            "exampleTutorMove": first_step.get("exampleTutorMove"),
             "stepCount": len(steps) if isinstance(steps, list) else 0,
         }
 

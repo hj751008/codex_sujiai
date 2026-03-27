@@ -4,6 +4,11 @@
     "skillId": "U1-S1",
     "status": "draft-from-docs",
     "summary": "Learner treats 1 as a prime number.",
+    "watchFor": [
+      "Learner uses memorized labels without divisor reasoning.",
+      "Learner says 1 is prime because it has no pairs other than 1."
+    ],
+    "operatorNote": "Bring the learner back to the definition of prime as exactly two divisors.",
     "sourceDocs": [
       "docs/suji-error-patterns-prime-factorization.md"
     ]
@@ -13,6 +18,11 @@
     "skillId": "U1-S3",
     "status": "draft-from-docs",
     "summary": "Learner omits repeated prime factors when writing prime factorized form.",
+    "watchFor": [
+      "Learner rewrites 12 as 2 x 3 instead of 2 x 2 x 3.",
+      "Learner can split correctly in scratch work but compresses too much in the final line."
+    ],
+    "operatorNote": "Ask the learner to rebuild the final line from scratch work without dropping repeated factors.",
     "sourceDocs": [
       "docs/suji-error-patterns-prime-factorization.md"
     ]
@@ -22,6 +32,11 @@
     "skillId": "U1-S4",
     "status": "draft-from-docs",
     "summary": "Learner accepts a factorization because the product matches, without checking whether all factors are prime.",
+    "watchFor": [
+      "Learner approves 2 x 6 for 12 because it multiplies correctly.",
+      "Learner never checks the meaning of the word 'prime' in prime factorization."
+    ],
+    "operatorNote": "Freeze the product check and inspect whether every factor is prime first.",
     "sourceDocs": [
       "docs/suji-error-patterns-prime-factorization.md"
     ]
@@ -31,6 +46,11 @@
     "skillId": "U1-S5A",
     "status": "draft-from-docs",
     "summary": "Learner lists divisors one by one instead of reusing the prime factorization structure.",
+    "watchFor": [
+      "Learner restarts from 1, 2, 3, ... despite already having a factorization.",
+      "Learner cannot say what information the factorization is supposed to provide."
+    ],
+    "operatorNote": "Ask what the completed factorization already gives before any divisor list starts.",
     "sourceDocs": [
       "docs/suji-error-patterns-prime-factorization.md"
     ]
@@ -40,6 +60,11 @@
     "skillId": "U1-S5B",
     "status": "draft-from-docs",
     "summary": "Learner chooses a random multiplier for a square-number task instead of using the missing prime-factor counts.",
+    "watchFor": [
+      "Learner guesses a multiplier and only checks afterward.",
+      "Learner does not inspect which prime count is odd."
+    ],
+    "operatorNote": "Have the learner mark odd prime counts before proposing any missing factor.",
     "sourceDocs": [
       "docs/suji-error-patterns-prime-factorization.md"
     ]
@@ -49,6 +74,11 @@
     "skillId": "U1-S5C",
     "status": "draft-from-docs",
     "summary": "Learner mixes common-divisor and common-multiple reasoning when comparing two factorizations.",
+    "watchFor": [
+      "Learner uses overlap language and cover language interchangeably.",
+      "Learner starts multiplying without classifying the task first."
+    ],
+    "operatorNote": "Pause calculation and make the learner say whether the task asks for overlap or coverage.",
     "sourceDocs": [
       "docs/suji-error-patterns-prime-factorization.md"
     ]
@@ -58,6 +88,11 @@
     "skillId": "U1-S5D",
     "status": "draft-from-docs",
     "summary": "Learner cannot explain which part of the factorization matters for the new question.",
+    "watchFor": [
+      "Learner recites the whole factorization without selecting a useful part.",
+      "Learner solves procedurally and cannot justify why that part was used."
+    ],
+    "operatorNote": "Require the learner to point to the relevant factor or exponent before computing.",
     "sourceDocs": [
       "docs/suji-error-patterns-prime-factorization.md"
     ]

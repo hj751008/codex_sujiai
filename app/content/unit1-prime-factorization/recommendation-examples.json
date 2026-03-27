@@ -4,6 +4,7 @@
     "recommend": "U1-S1",
     "confidence": "limited",
     "needsReview": true,
+    "operatorNote": "Keep the discussion anchored to divisor count instead of label memorization.",
     "sourceDocs": [
       "docs/recommendation-rules.md"
     ]
@@ -13,6 +14,7 @@
     "recommend": "U1-S4",
     "confidence": "limited",
     "needsReview": true,
+    "operatorNote": "Check whether the learner verifies primeness before checking the product.",
     "sourceDocs": [
       "docs/recommendation-rules.md"
     ]
@@ -22,6 +24,7 @@
     "recommend": "U1-S5",
     "confidence": "limited",
     "needsReview": true,
+    "operatorNote": "Choose the transfer subskill by listening for how the learner reuses factorization.",
     "sourceDocs": [
       "docs/recommendation-rules.md"
     ]
@@ -31,6 +34,7 @@
     "recommend": "U1-S5A",
     "confidence": "limited",
     "needsReview": true,
+    "operatorNote": "Prompt the learner to say what the factorization already tells them before any divisor listing.",
     "sourceDocs": [
       "docs/suji-subskills-prime-factorization.md",
       "docs/suji-error-patterns-prime-factorization.md"
@@ -41,6 +45,7 @@
     "recommend": "U1-S5B",
     "confidence": "limited",
     "needsReview": true,
+    "operatorNote": "Shift attention to odd prime counts rather than trial-and-error multiplication.",
     "sourceDocs": [
       "docs/suji-subskills-prime-factorization.md",
       "docs/suji-error-patterns-prime-factorization.md"
@@ -51,6 +56,7 @@
     "recommend": "U1-S5C",
     "confidence": "limited",
     "needsReview": true,
+    "operatorNote": "Make the learner classify the task as overlap or cover before calculating.",
     "sourceDocs": [
       "docs/suji-subskills-prime-factorization.md",
       "docs/suji-error-patterns-prime-factorization.md"
@@ -61,6 +67,7 @@
     "recommend": "U1-S5D",
     "confidence": "limited",
     "needsReview": true,
+    "operatorNote": "Ask the learner to point to the relevant factor or exponent before solving.",
     "sourceDocs": [
       "docs/suji-subskills-prime-factorization.md",
       "docs/suji-error-patterns-prime-factorization.md"

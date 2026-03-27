@@ -7,6 +7,12 @@
     "title": "Prime, Composite, or Neither",
     "goal": "Repair the idea that 1 is prime and rebuild divisor-based classification.",
     "firstTutorQuestion": "How many divisors does 1 actually have?",
+    "operatorFocus": "Keep the learner on divisor count, not memorized labels.",
+    "watchFor": [
+      "Learner says '1 is prime because it is special' without using divisor reasoning.",
+      "Learner can repeat 'neither' but cannot explain why."
+    ],
+    "exampleTutorMove": "Ask the learner to list the divisors of 1 before naming the category.",
     "successSignal": "Learner says 1 is neither prime nor composite and gives a divisor-based reason.",
     "sourceDocs": [
       "docs/suji-tutor-dialogue-flow-prime-factorization.md",
@@ -21,6 +27,12 @@
     "title": "Entry Bridge With 24",
     "goal": "Rebuild the habit of starting with an easy divisor pair instead of freezing.",
     "firstTutorQuestion": "What is the easiest divisor you can test first?",
+    "operatorFocus": "Reward a calm starting move instead of speed.",
+    "watchFor": [
+      "Learner freezes because they think they must finish the whole factorization at once.",
+      "Learner chooses a hard divisor first even after noticing the number is even."
+    ],
+    "exampleTutorMove": "If the learner hesitates, point back to the word 'even' and ask what divisor that suggests.",
     "successSignal": "Learner chooses 2 as a starting point for 24 and explains why.",
     "sourceDocs": [
       "docs/suji-worked-bridge-prime-factorization-entry.md",
@@ -35,6 +47,12 @@
     "title": "Rewrite the Final Factorization Cleanly",
     "goal": "Stabilize the move from split-work to a complete final prime factorization.",
     "firstTutorQuestion": "Which factors should still remain in the final line?",
+    "operatorFocus": "Push for one clean final line, not more splitting work.",
+    "watchFor": [
+      "Learner drops a repeated factor while rewriting.",
+      "Learner leaves a composite factor in the final line."
+    ],
+    "exampleTutorMove": "Cover the scratch work and ask the learner to rebuild only the final prime-factor line.",
     "successSignal": "Learner writes one complete prime factorization with no missing or composite factor.",
     "sourceDocs": [
       "docs/suji-tutor-dialogue-flow-prime-factorization.md",
@@ -49,6 +67,12 @@
     "title": "Verification Bridge With 12",
     "goal": "Teach the learner to check whether every factor is prime before accepting a factorization.",
     "firstTutorQuestion": "Before checking the product, are all the factors prime?",
+    "operatorFocus": "Make 'all factors prime' come before product-checking.",
+    "watchFor": [
+      "Learner accepts 2 x 6 only because it multiplies correctly.",
+      "Learner checks the product first and never inspects whether 6 is composite."
+    ],
+    "exampleTutorMove": "Hold both answers side by side and ask which one still contains a composite number.",
     "successSignal": "Learner rejects 2 x 6 because 6 is not prime and chooses 2 x 2 x 3.",
     "sourceDocs": [
       "docs/suji-worked-bridge-prime-factorization-verification.md",
@@ -63,6 +87,12 @@
     "title": "Reuse Factorization for Divisor Count",
     "goal": "Stop the learner from restarting divisor counting from scratch.",
     "firstTutorQuestion": "In this problem, do you need the factorization itself or the number of divisors?",
+    "operatorFocus": "Keep the learner from listing every divisor one by one.",
+    "watchFor": [
+      "Learner abandons the factorization they already built.",
+      "Learner starts listing divisors without explaining what the task is asking for."
+    ],
+    "exampleTutorMove": "Ask what information the completed factorization already gives before allowing any divisor list.",
     "successSignal": "Learner starts from the existing prime factorization instead of listing divisors one by one.",
     "sourceDocs": [
       "docs/suji-tutor-dialogue-flow-prime-factorization.md",
@@ -77,6 +107,12 @@
     "title": "Find the Missing Factor for a Square",
     "goal": "Connect prime-factor counts to square-number structure.",
     "firstTutorQuestion": "Which prime factor count is odd right now and needs one more?",
+    "operatorFocus": "Point to odd exponent counts instead of guessing a multiplier.",
+    "watchFor": [
+      "Learner picks a multiplier by trial and error.",
+      "Learner knows the answer but cannot justify it with prime-factor counts."
+    ],
+    "exampleTutorMove": "Circle only the odd-count prime and ask what single factor would make that count even.",
     "successSignal": "Learner identifies the missing factor from the prime factorization and explains why.",
     "sourceDocs": [
       "docs/suji-tutor-dialogue-flow-prime-factorization.md",
@@ -91,6 +127,12 @@
     "title": "Sort Common Divisor vs Common Multiple",
     "goal": "Help the learner name which structure to look for before calculating.",
     "firstTutorQuestion": "Are you looking for what overlaps or what covers both numbers?",
+    "operatorFocus": "Get the learner to classify the structure before any arithmetic.",
+    "watchFor": [
+      "Learner starts calculating without deciding whether the task is GCD or LCM.",
+      "Learner uses the word 'common' but cannot distinguish shared from covering structure."
+    ],
+    "exampleTutorMove": "Say 'overlap or cover?' before writing any factors on the page.",
     "successSignal": "Learner can say whether the task is about shared structure or covering structure before solving.",
     "sourceDocs": [
       "docs/suji-tutor-dialogue-flow-prime-factorization.md",
@@ -105,6 +147,12 @@
     "title": "Explain Which Part of the Factorization Matters",
     "goal": "Make the learner point to the relevant part of the factorization before solving a transfer task.",
     "firstTutorQuestion": "Which part of the factorization helps you answer this question first?",
+    "operatorFocus": "Make the learner point to the useful part before they compute.",
+    "watchFor": [
+      "Learner recites the entire factorization without selecting the relevant part.",
+      "Learner solves mechanically and only explains after the answer."
+    ],
+    "exampleTutorMove": "Pause the learner and ask them to underline the part of the factorization they plan to use.",
     "successSignal": "Learner identifies the relevant part of the factorization before using it.",
     "sourceDocs": [
       "docs/suji-tutor-dialogue-flow-prime-factorization.md",

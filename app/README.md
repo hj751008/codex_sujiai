@@ -24,6 +24,17 @@ structure is schema-first and explanation-first rather than scoring-first.
 The initial scaffold only models Unit 1 prime factorization because that is the
 most concrete content currently documented in the repository.
 
+## Operator Flow
+
+For the current CLI-first tutoring loop, the smallest practical flow is:
+
+1. `python app/cli.py start-learning-session --learner <learner-record.json>`
+2. Show the returned `sessionStartGuide` to the tutor.
+3. After the learner responds, run `python app/cli.py run-learning-turn --learner <learner-record.json> --input <observation-form.json>`.
+4. Read `turnSummary.nextAction`.
+5. If it says `continue_active_session`, stay in the current session and use `nextStepGuide`.
+6. If it says `review_next_recommendation`, the previous session is complete and the next session should be chosen from the recommendation summary.
+
 Some app-facing records may split broad documented skills into draft child
 skills for diagnosis and recommendation. When that happens, keep the documented
 parent skill explicit and mark the child records as draft or provisional rather
